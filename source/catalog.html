@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+</head>
+
+<body>
+    <header class="page-header">
+        <a class="page-header__logo" href="index.html">
+            <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="86" height="35" alt="Магазин 'Мишка'">
+        </a>
+        <nav class="main-nav">
+            <ul class="main-nav__list">
+                <li class="main-nav__item"><a href="index.html">Главная страница</a></li>
+                <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
+            </ul>
+        </nav>
+        <form class="page-header__search search" action="#"><input class="search__input" type="text" placeholder="Поиск по сайту">
+        </form>
+        <a class="page-header__cart cart" href="#">Корзина: пока пуста</a>
+
+    </header>
+    <main class="page-main catalog">
+        <h1 class="catalog__header">Каталог товаров</h1>
+        <section class="catalog__goods goods">
+            <h2 class="visually-hidden">Наши товары</h2>
+            <ul class="goods__list">
+                <li class="goods__item good-card">
+                    <a href="#">
+                        <img class="good-card__image" src="#" alt="Зайчик-попрыгайчик" width="260" height="195">
+                        <h3 class="good-card__header">Зайчик-попрыгайчик</h3>
+                    </a>
+                    <span class="good-card__description">Рост 30 см, Вес 200 г</span>
+                    <div class="good-card__wrapper">
+                        <b class="good-card__price">1200 руб.</b>
+                        <button class="good-card__cart" type="button"></button>
+                    </div>
+                </li>
+            </ul>
+
+        </section>
+
+    </main>
+</body>
+
+</html>
