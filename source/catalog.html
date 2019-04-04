@@ -20,8 +20,8 @@
         <form class="page-header__search search" action="#"><input class="search__input" type="text" placeholder="Поиск по сайту">
         </form>
         <a class="page-header__cart cart" href="#">Корзина: пока пуста</a>
-
     </header>
+
     <main class="page-main catalog">
         <h1 class="catalog__header">Каталог товаров</h1>
         <section class="catalog__goods goods">
@@ -29,20 +29,82 @@
             <ul class="goods__list">
                 <li class="goods__item good-card">
                     <a href="#">
-                        <img class="good-card__image" src="#" alt="Зайчик-попрыгайчик" width="260" height="195">
+                        <img class="good-card__image" src="http://placehold.it/260x195" alt="Зайчик-попрыгайчик" width="260" height="195">
                         <h3 class="good-card__header">Зайчик-попрыгайчик</h3>
                     </a>
                     <span class="good-card__description">Рост 30 см, Вес 200 г</span>
                     <div class="good-card__wrapper">
                         <b class="good-card__price">1200 руб.</b>
-                        <button class="good-card__cart" type="button"></button>
+                        <button class="good-card__cart" type="button"><span class="visually-hidden">Корзина</span></button>
+                    </div>
+                </li>
+                <li class="goods__item good-card">
+                    <a href="#">
+                        <img class="good-card__image" src="http://placehold.it/260x195" alt="Корзинка для белья" width="260" height="195">
+                        <h3 class="good-card__header">Корзинка для белья</h3>
+                    </a>
+                    <span class="good-card__description">Диаметр 15 см, высота 10 см</span>
+                    <div class="good-card__wrapper">
+                        <b class="good-card__price">690 руб.</b>
+                        <button class="good-card__cart" type="button"><span class="visually-hidden">Корзина</span></button>
+                    </div>
+                </li>
+                <li class="goods__item good-card">
+                    <a href="#">
+                        <img class="good-card__image" src="http://placehold.it/260x195" alt="Большая корзинка для игрушек" width="260" height="195">
+                        <h3 class="good-card__header">Большая корзинка для игрушек</h3>
+                    </a>
+                    <span class="good-card__description">Диаметр 30 см, высота 30 см</span>
+                    <div class="good-card__wrapper">
+                        <b class="good-card__price">1500 руб.</b>
+                        <button class="good-card__cart" type="button"><span class="visually-hidden">Корзина</span></button>
                     </div>
                 </li>
             </ul>
-
         </section>
-
+        <section class="modal">
+            <h1 class="modal__header">Добавить в корзину</h1>
+            <span class="modal__proposition"></span>
+            <form class="modal__form cart-add" action="#">
+                <div class="cart-add__wrapper">
+                    <label class="cart-add__label"><input class="cart-add__size" type="checkbox" name="s" checked></label>
+                    <label class="cart-add__label"><input class="cart-add__size" type="checkbox" name="m"></label>
+                    <label class="cart-add__label"><input class="cart-add__size" type="checkbox" name="l"></label>
+                </div>
+                <button class="cart-add__btn btn" type="submit">Добавить</button>
+            </form>
+        </section>
+        <section class="catalog__making making">
+            <div class="making__header-wrapper">
+                <h3 class="making__header">Процесс производства</h3>
+            </div>
+            <div class="making__container">
+                <img class="making__image" src="http://placehold.it/260x150" alt="Процесс производства" width="260" height="150">
+            </div>
+            <p class="making__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+            <a class="making__btn btn" href="form.html">Сделать заказ</a>
+        </section>
     </main>
+
+    <footer class="page-footer">
+        <div class="page-footer__social social">
+            <ul class="social__list" aria-label="Мы в соцсетях">
+                <li class="social__item">
+                    <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" target="_blank"><span class="visually-hidden">Instagram</span></a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank"><span class="visually-hidden">Facebook</span></a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru" target="_blank"><span class="visually-hidden">Twitter</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+            <b class="copyright__text">Разработано</b>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+        </div>
+    </footer>
 </body>
 
 </html>
