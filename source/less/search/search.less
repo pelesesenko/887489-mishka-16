@@ -1,0 +1,28 @@
+.search{
+  width: 100%;
+  padding: 20px 0 15px 24%;
+  position: relative;
+  border-bottom: 1px solid #ececec;
+}
+.search__input{
+  width:90%;
+  padding: 10px 0;
+  position: relative;
+  z-index: 2;
+}
+.search__label{
+  position: absolute;
+  width: 76%;
+  z-index: 3;
+  top: 0;
+  left: 24%;
+  padding: 25px 0;
+  background-color: white;
+  cursor: pointer;
+}
+.search__input:focus{
+  //display: block;
+}
+.search__input:focus+.search__label{
+  z-index: 1;
+}

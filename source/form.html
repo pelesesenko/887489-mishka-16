@@ -4,28 +4,42 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header class="page-header">
-        <a class="page-header__logo" href="index.html">
-            <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="86" height="35" alt="Магазин 'Мишка'">
-        </a>
-        <nav class="main-nav">
-            <ul class="main-nav__list">
-                <li class="main-nav__item"><a href="index.html">Главная страница</a></li>
-                <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
-            </ul>
-        </nav>
-        <form class="page-header__search search" action="#"><input class="search__input" type="text" placeholder="Поиск по сайту">
-        </form>
-        <a class="page-header__cart cart" href="#">Корзина: пока пуста</a>
+        <div class="page-header__logo-wrapper">
+            <a class="page-header__logo" href="index.html">
+                <img class="page-header__logo-image" src="less/page-header/img/logo-mobile.svg" width="86" height="35" alt="Магазин 'Мишка'">
+            </a>
+        </div>
+        <div class="page-header__menu">
+            <nav class="main-nav">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная страница</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
+                </ul>
+            </nav>
+            <form class="page-header__search search" action="https://echo.htmlacademy.ru"><input class="search__input" type="text" name="search__input" id="search__input">
+                <label class="search__label" for="search__input">Поиск по сайту</label>
+            </form>
+            <a class="page-header__cart cart" href="#">Корзина: пока пуста</a>
+        </div>
     </header>
 
     <main class="page-main order">
-        <div class="order__wrapper">
-            <h1 class="order__header">Вязание на заказ</h1>
-        </div>
+        <section class="main-header">
+            <div class="main-header__menu">
+                <ul class="main-header__nav">
+                    <li class="main-header__link">Новые поступления</li>
+                    <li class="main-header__link">Распродажа</li>
+                </ul>
+                <a class="main-header__delivery" href="#">Бесплатная доставка по России</a>
+            </div>
+            <h1 class="main-header__head">Вязание на заказ</h1>
+            <div class="main-header__wave"></div>
+        </section>
         <div class="order__wrapper">
             <span class="order__tip">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</span>
         </div>

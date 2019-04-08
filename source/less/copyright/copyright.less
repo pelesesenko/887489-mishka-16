@@ -1,0 +1,21 @@
+.copyright{
+  display: flex;
+  justify-content: center;
+  padding: 14px 0 14px 5px;
+}
+.copyright__text{
+  .font(19px, 18px, bold);
+  padding-top: 13px;
+}
+.copyright__link{
+  &::before{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 50px;
+    background-image: url("../img/htmlacademy_green.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 21px;
+  }
+}
