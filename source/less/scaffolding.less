@@ -1,0 +1,44 @@
+@font-family: "Open Sans", "Arial", sans-serif;
+@444: #444444;
+@lg: #63d1bb;
+
+.font(@font-size, @line-height: normal, @font-weight: normal) {
+  font-family: @font-family;
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: @font-weight;
+}
+
+body {
+  margin: 0;
+  width: 320px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

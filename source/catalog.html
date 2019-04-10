@@ -4,43 +4,60 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header class="page-header">
-        <a class="page-header__logo" href="index.html">
-            <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="86" height="35" alt="Магазин 'Мишка'">
-        </a>
-        <nav class="main-nav">
-            <ul class="main-nav__list">
-                <li class="main-nav__item"><a href="index.html">Главная страница</a></li>
-                <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
-            </ul>
-        </nav>
-        <form class="page-header__search search" action="#"><input class="search__input" type="text" placeholder="Поиск по сайту">
-        </form>
-        <a class="page-header__cart cart" href="#">Корзина: пока пуста</a>
+        <div class="page-header__logo-wrapper">
+            <a class="page-header__logo" href="index.html">
+                <img class="page-header__logo-image" src="./img/logo-mobile.svg" width="86" height="35" alt="Магазин 'Мишка'">
+            </a>
+        </div>
+        <button class="page-header__btn-menu"></button>
+        <div class="page-header__menu">
+            <nav class="main-nav">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a a class="main-nav__link" href="index.html">Главная страница</a></li>
+                    <li class="main-nav__item"><a a class="main-nav__link" href="form.html">Вязание на заказ</a></li>
+                </ul>
+            </nav>
+            <form class="page-header__search search" action="https://echo.htmlacademy.ru"><input class="search__input" type="text" name="search__input" id="search__input">
+                <label class="search__label" for="search__input">Поиск по сайту</label>
+            </form>
+            <a class="page-header__cart cart" href="#">Корзина: пока пуста</a>
+        </div>
     </header>
 
     <main class="page-main catalog">
-        <h1 class="catalog__header">Каталог товаров</h1>
+        <section class="main-header">
+            <div class="main-header__menu">
+                <ul class="main-header__nav">
+                    <li class="main-header__link">Новые поступления</li>
+                    <li class="main-header__link">Распродажа</li>
+                </ul>
+                <a class="main-header__delivery" href="#">Бесплатная доставка по России</a>
+            </div>
+            <h1 class="main-header__head">Каталог товаров</h1>
+            <div class="main-header__wave"></div>
+        </section>
         <section class="catalog__goods goods">
             <h2 class="visually-hidden">Наши товары</h2>
             <ul class="goods__list">
                 <li class="goods__item good-card">
                     <a href="#">
-                        <img class="good-card__image" src="http://placehold.it/260x195" alt="Зайчик-попрыгайчик" width="260" height="195">
+                        <img class="good-card__image" src="./img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
                         <h3 class="good-card__header">Зайчик-попрыгайчик</h3>
                     </a>
                     <span class="good-card__description">Рост 30 см, Вес 200 г</span>
                     <div class="good-card__wrapper">
-                        <b class="good-card__price">1200 руб.</b>
+                        <b class="good-card__price">1 200 руб.</b>
                         <button class="good-card__cart" type="button"><span class="visually-hidden">Корзина</span></button>
                     </div>
                 </li>
                 <li class="goods__item good-card">
                     <a href="#">
-                        <img class="good-card__image" src="http://placehold.it/260x195" alt="Корзинка для белья" width="260" height="195">
+                        <img class="good-card__image" src="./img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
                         <h3 class="good-card__header">Корзинка для белья</h3>
                     </a>
                     <span class="good-card__description">Диаметр 15 см, высота 10 см</span>
@@ -51,12 +68,12 @@
                 </li>
                 <li class="goods__item good-card">
                     <a href="#">
-                        <img class="good-card__image" src="http://placehold.it/260x195" alt="Большая корзинка для игрушек" width="260" height="195">
+                        <img class="good-card__image" src="./img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
                         <h3 class="good-card__header">Большая корзинка для игрушек</h3>
                     </a>
                     <span class="good-card__description">Диаметр 30 см, высота 30 см</span>
                     <div class="good-card__wrapper">
-                        <b class="good-card__price">1500 руб.</b>
+                        <b class="good-card__price">1 500 руб.</b>
                         <button class="good-card__cart" type="button"><span class="visually-hidden">Корзина</span></button>
                     </div>
                 </li>
@@ -65,7 +82,7 @@
         <section class="modal">
             <h1 class="modal__header">Добавить в корзину</h1>
             <span class="modal__proposition"></span>
-            <form class="modal__form cart-add" action="#">
+            <form class="modal__form cart-add" action="https://echo.htmlacademy.ru">
                 <div class="cart-add__wrapper">
                     <label class="cart-add__label"><input class="cart-add__size" type="checkbox" name="s" checked></label>
                     <label class="cart-add__label"><input class="cart-add__size" type="checkbox" name="m"></label>
@@ -75,14 +92,19 @@
             </form>
         </section>
         <section class="catalog__making making">
-            <div class="making__header-wrapper">
-                <h3 class="making__header">Процесс производства</h3>
-            </div>
+
+            <h3 class="making__header">Процесс производства</h3>
+
             <div class="making__container">
-                <img class="making__image" src="http://placehold.it/260x150" alt="Процесс производства" width="260" height="150">
+                <img class="making__image" src="./img/video-mobile@1x.jpg" alt="Процесс производства" width="260" height="150">
             </div>
-            <p class="making__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-            <a class="making__btn btn" href="form.html">Сделать заказ</a>
+            <div class="making__bottom">
+
+                <h3 class="making__header making__header--descktop">Процесс производства</h3>
+
+                <p class="making__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+                <a class="making__btn btn" href="form.html">Сделать заказ</a>
+            </div>
         </section>
     </main>
 
