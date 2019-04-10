@@ -1,6 +1,7 @@
 .page-header {
   min-width: 320px;
   margin-top: 10px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,9 +19,21 @@
   border-bottom: 1px solid #ececec;
 }
 
+.page-header__btn-menu {
+  position: absolute;
+  width: 20px;
+  height: 14px;
+  background-color: transparent;
+  border: none;
+  border-top: 2px solid #221f1f;
+  border-bottom: 2px solid #221f1f;
+  top: 33px;
+  right: 30px;
+}
+
 .page-header__menu {
   width: 100%;
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }

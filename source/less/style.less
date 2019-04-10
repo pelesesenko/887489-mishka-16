@@ -1,82 +1,26 @@
-@import "./normalize.less";
-
-@font-face {
-  font-family: "Open Sans";
-  src: local("OpenSans"), local("OpenSans Regular"), url("../fonts/opensans.woff") format("woff"), url("../fonts/opensans.woff2") format("woff2");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Open Sans";
-  src: local("OpenSans"), local("OpenSans Bold"), url("../fonts/opensansbold.woff") format("woff"), url("../fonts/opensansbold.woff2") format("woff2");
-  font-weight: bold;
-}
-
-body {
-  margin: 0;
-  width: 320px;
-}
-
-img {
-  max-width: 100%;
-}
-
-a {
-  text-decoration: none;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-@font-family: "Open Sans", "Arial", sans-serif;
-@444: #444444;
-@lg: #63d1bb;
-
-.font(@font-size, @line-height: normal, @font-weight: normal) {
-  font-family: @font-family;
-  font-size: @font-size;
-  line-height: @line-height;
-  font-weight: @font-weight;
-}
-
-@import "./h2/h2.less";
-@import "./btn/btn.less";
-@import "./page-header/page-header.less";
-@import "./main-nav/main-nav.less";
-@import "./search/search.less";
-@import "./cart/cart.less";
-@import "./page-main/page-main.less";
-@import "./main-header/main-header.less";
-@import "./week-product/week-product.less";
-@import "./tabel-parameters/tabel-parameters.less";
-@import "./about/about.less";
-@import "./reviews/reviews.less";
-@import "./contacts/contacts.less";
-@import "./catalog/catalog.less";
-@import "./goods/goods.less";
-@import "./good-card/good-card.less";
-@import "./making/making.less";
-@import "./order/order.less";
-@import "./order-form/order-form.less";
-@import "./modal/modal.less";
-@import "./page-footer/page-footer.less";
-@import "./social/social.less";
-@import "./copyright/copyright.less";
+@import "./normalize.css";
+@import "./fonts.less";
+@import "./scaffolding.less";
+@import "./blocks/h2.less";
+@import "./blocks/btn.less";
+@import "./blocks/page-header.less";
+@import "./blocks/main-nav.less";
+@import "./blocks/search.less";
+@import "./blocks/cart.less";
+@import "./blocks/page-main.less";
+@import "./blocks/main-header.less";
+@import "./blocks/week-product.less";
+@import "./blocks/tabel-parameters.less";
+@import "./blocks/about.less";
+@import "./blocks/reviews.less";
+@import "./blocks/contacts.less";
+@import "./blocks/catalog.less";
+@import "./blocks/goods.less";
+@import "./blocks/good-card.less";
+@import "./blocks/making.less";
+@import "./blocks/order.less";
+@import "./blocks/order-form.less";
+@import "./blocks/modal.less";
+@import "./blocks/page-footer.less";
+@import "./blocks/social.less";
+@import "./blocks/copyright.less";
