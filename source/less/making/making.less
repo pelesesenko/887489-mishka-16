@@ -1,15 +1,16 @@
-.making{
+.making {
   display: flex;
   flex-direction: column;
   border: 1px solid #ececec;
 }
 
-.making__header{
+.making__header {
   display: flex;
   font-size: 17px;
   margin: 0;
-  padding:24px 40px 24px 34px;
-  &::before{
+  padding: 24px 40px 24px 34px;
+
+  &::before {
     content: "";
     display: block;
     width: 52px;
@@ -17,14 +18,14 @@
     background-image: url("../img/icon-video.svg");
     margin-right: 24px;
     margin-top: 6px;
-
   }
 }
-.making__container{
+
+.making__container {
   position: relative;
 
-  &::before{
-    content:"";
+  &::before {
+    content: "";
     position: absolute;
     width: 101px;
     height: 77px;
@@ -39,17 +40,19 @@
 
 // }
 
-.making__description{
+.making__description {
   font-weight: normal;
   font-size: 13px;
   color: @444;
   padding: 0 35px;
-  margin:21px 0 25px;
+  margin: 21px 0 25px;
 }
-.making__btn{
+
+.making__btn {
   width: 192px;
   margin: 0 34px 33px;
 }
-.making__header--descktop{
+
+.making__header--descktop {
   display: none;
 }
