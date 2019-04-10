@@ -1,6 +1,38 @@
 .cart {
   width: 100%;
+  position: relative;
   padding: 25px 0 29px 24%;
   border-bottom: 1px solid #ececec;
   color: #000000;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/icon-cart.svg");
+    left: 30px;
+    top: 28px;
+    opacity: 0.3;
+  }
 }
+
+.cart:hover {
+  color: rgba(0, 0, 0, 0.6);
+
+  &::before {
+    background-image: url("../img/icon-cart_gr.svg");
+    opacity: 1;
+  }
+}
+
+.cart:active {
+  color: rgba(0, 0, 0, 0.3);
+
+  &::before {
+    background-image: url("../img/icon-cart_gr.svg");
+    opacity: 0.4;
+  }
+}
+

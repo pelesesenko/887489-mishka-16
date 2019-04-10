@@ -9,6 +9,16 @@
   font-weight: @font-weight;
 }
 
+.hao(@selector) {
+  @{selector}:hover {
+    opacity: 0.6;
+  }
+
+  @{selector}:active {
+    opacity: 0.3;
+  }
+}
+
 body {
   margin: 0;
   width: 320px;
