@@ -1,211 +1,218 @@
 .order-form__wrapper {
-    width: 320px;
-    margin: 0 auto;
-    padding: 0 30px;
-    display: flex;
-    flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .order-form__header {
-    font-size: 17px;
-    line-height: 16px;
-    color: @lg;
-    margin: 0;
-    &::after {
-        content: "";
-        display: block;
-        width: 198px;
-        height: 1px;
-        margin-left: auto;
-        background-color: @lg;
-        position: relative;
-        top: -8px;
-    }
+  font-size: 17px;
+  line-height: 16px;
+  color: @lg;
+  margin: 0;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 198px;
+    height: 1px;
+    margin-left: auto;
+    background-color: @lg;
+    position: relative;
+    top: -8px;
+  }
 }
 
 .order-form__header--email {
-    &::after {
-        width: 179px;
-    }
+  &::after {
+    width: 179px;
+  }
 }
 
 .order-form__container {
-    display: flex;
-    flex-direction: column;
-    padding-top: 33px;
-    padding-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 33px;
+  padding-bottom: 18px;
 }
 
 .order-form__container--color {
-    padding-top: 36px;
+  padding-top: 36px;
 }
 
 .order-form__type,
 .order-form__color {
-    display: none;
+  display: none;
 }
 
 .order-form__label {
-    line-height: 18px;
-    position: relative;
+  line-height: 18px;
+  position: relative;
 }
 
 .order-form__label--type,
 .order-form__label--color {
-    padding-left: 62px;
-    &::before {
-        content: "";
-        position: absolute;
-        width: 40px;
-        height: 39px;
-        border: 2px solid @444;
-        left: 0;
-        top: -10px;
-    }
+  padding-left: 62px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 39px;
+    border: 2px solid @444;
+    left: 0;
+    top: -10px;
+  }
 }
 
 .order-form__label--type {
-    padding-bottom: 25px;
-    &::before {
-        width: 39px;
-        border-radius: 50%;
-    }
-    &::after {
-        content: "";
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background-color: @lg;
-        left: 12px;
-        top: 2px;
-        display: none;
-    }
+  padding-bottom: 25px;
+
+  &::before {
+    width: 39px;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: @lg;
+    left: 12px;
+    top: 2px;
+    display: none;
+  }
 }
 
 .order-form__label--color {
-    padding-bottom: 43px;
-    &::before {
-        top: -12px;
-    }
-    &::after {
-        content: "";
-        position: absolute;
-        width: 10px;
-        height: 22px;
-        border-bottom: 2px solid @444;
-        border-right: 2px solid @444;
-        transform: rotate(45deg);
-        left: 14px;
-        top: -6px;
-        display: none;
-    }
+  padding-bottom: 43px;
+
+  &::before {
+    top: -12px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 22px;
+    border-bottom: 2px solid @444;
+    border-right: 2px solid @444;
+    transform: rotate(45deg);
+    left: 14px;
+    top: -6px;
+    display: none;
+  }
 }
 
 .order-form__label--color:last-of-type {
-    padding-bottom: 23px;
+  padding-bottom: 23px;
 }
 
-.order-form__type:checked+.order-form__label::after,
-.order-form__color:checked+.order-form__label::after {
-    display: block;
+.order-form__type:checked + .order-form__label::after,
+.order-form__color:checked + .order-form__label::after {
+  display: block;
 }
 
 .order-form__container--fullname {
-    padding-top: 28px;
+  padding-top: 28px;
 }
 
 .order-form__fullname {
-    border: none;
-    border-bottom: 2px solid black;
-    padding: 16px 0;
-    margin-bottom: 22px;
-    // opacity: 0.5;
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 16px 0;
+  margin-bottom: 22px;
+  // opacity: 0.5;
 }
 
 .order-form__fullname:hover {
-    border-color: @lg;
+  border-color: @lg;
 }
 
 .order-form__fullname:focus {
-    opacity: 1;
-    border-color: @lg;
-    border-width: 1px;
-    outline: none;
+  opacity: 1;
+  border-color: @lg;
+  border-width: 1px;
+  outline: none;
 }
 
 .order-form__fullname:last-of-type {
-    margin-bottom: 13px;
+  margin-bottom: 13px;
 }
 
 .order-form__contacts {
-    border: none;
-    padding: 16px 0 14px;
-    opacity: 0.5;
+  border: none;
+  padding: 16px 0 14px;
+  opacity: 0.5;
 }
 
 .order-form__fullname,
 .order-form__contacts,
 .order-form__add {
-    width: 100%;
-    font: unset;
-    .font(17px, 18px, normal);
-    color: @444;
+  width: 100%;
+  font: unset;
+  .font(17px, 18px, normal);
+  color: @444;
 }
 
 .order-form__contacts--phone {
-    font-size: 19px;
+  font-size: 19px;
 }
 
 .order-form__contacts--email {
-    padding: 21px 0 17px;
+  padding: 21px 0 17px;
 }
 
 .order-form__add {
-    margin: 24px 0 16px;
-    padding: 15px;
-    border: 2px solid @444;
-    resize: none;
+  margin: 24px 0 16px;
+  padding: 15px;
+  border: 2px solid @444;
+  resize: none;
 }
 
 .order-form__note {
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .order-form__btn {
-    margin: 31px 0 55px;
+  margin: 31px 0 55px;
 }
 
 .order-form__cage {
-    display: block;
+  display: block;
 }
 
 .order-form__contacts-icon {
-    position: relative;
-    width: 100%;
-    height: 2px;
-    background-color: black;
-    margin-bottom: 32px;
-    &::after {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 25px;
-        height: 24px;
-        background-image: url("../img/icon-phone.svg");
-        right: 8px;
-        top: -39px;
-        opacity: 0.2;
-    }
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  margin-bottom: 32px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 24px;
+    background-image: url("../img/icon-phone.svg");
+    right: 8px;
+    top: -39px;
+    opacity: 0.2;
+  }
 }
 
 .order-form__contacts-icon--email {
-    &::after {
-        width: 32px;
-        height: 32px;
-        background-image: url("../img/icon-mail.svg");
-        right: 5px;
-    }
+  &::after {
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/icon-mail.svg");
+    right: 5px;
+  }
 }

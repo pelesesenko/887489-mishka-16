@@ -1,48 +1,49 @@
 @import "./normalize.less";
+
 @font-face {
-    font-family: 'Open Sans';
-    src: local('OpenSans'), local('OpenSans Regular'), url('../fonts/opensans.woff') format('woff'), url('../fonts/opensans.woff2') format('woff2');
-    font-weight: normal;
+  font-family: "Open Sans";
+  src: local("OpenSans"), local("OpenSans Regular"), url("../fonts/opensans.woff") format("woff"), url("../fonts/opensans.woff2") format("woff2");
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: 'Open Sans';
-    src: local('OpenSans'), local('OpenSans Bold'), url('../fonts/opensansbold.woff') format('woff'), url('../fonts/opensansbold.woff2') format('woff2');
-    font-weight: bold;
+  font-family: "Open Sans";
+  src: local("OpenSans"), local("OpenSans Bold"), url("../fonts/opensansbold.woff") format("woff"), url("../fonts/opensansbold.woff2") format("woff2");
+  font-weight: bold;
 }
 
 body {
-    margin: 0;
-    width: 320px;
+  margin: 0;
+  width: 320px;
 }
 
 img {
-    max-width: 100%
+  max-width: 100%;
 }
 
 a {
-    text-decoration: none
+  text-decoration: none;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 @font-family: "Open Sans", "Arial", sans-serif;
@@ -50,10 +51,10 @@ html {
 @lg: #63d1bb;
 
 .font(@font-size, @line-height: normal, @font-weight: normal) {
-    font-family: @font-family;
-    font-size: @font-size;
-    line-height: @line-height;
-    font-weight: @font-weight;
+  font-family: @font-family;
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: @font-weight;
 }
 
 @import "./h2/h2.less";
@@ -75,10 +76,7 @@ html {
 @import "./making/making.less";
 @import "./order/order.less";
 @import "./order-form/order-form.less";
-
-
 @import "./modal/modal.less";
-
 @import "./page-footer/page-footer.less";
 @import "./social/social.less";
 @import "./copyright/copyright.less";
