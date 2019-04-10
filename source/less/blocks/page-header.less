@@ -29,6 +29,23 @@
   border-bottom: 2px solid #221f1f;
   top: 33px;
   right: 30px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 2px;
+    background-color: #221f1f;
+    top: 0;
+    left: -6px;
+  }
+}
+
+.page-header__btn-menu--close {
+  &::after {
+    width: 28px;
+  }
 }
 
 .page-header__menu {
