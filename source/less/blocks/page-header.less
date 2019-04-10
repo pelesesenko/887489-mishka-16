@@ -19,7 +19,10 @@
   border-bottom: 1px solid #ececec;
 }
 
+.hao(~".page-header__logo--link");
+
 .page-header__btn-menu {
+  display: block;
   position: absolute;
   width: 20px;
   height: 14px;
@@ -43,8 +46,25 @@
 }
 
 .page-header__btn-menu--close {
+  border: none;
+
   &::after {
-    width: 28px;
+    width: 27px;
+    left: -9px;
+    top: -1px;
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: relative;
+    width: 27px;
+    height: 2px;
+    background-color: #221f1f;
+    top: 1px;
+    left: -9px;
+    transform: rotate(-45deg);
   }
 }
 

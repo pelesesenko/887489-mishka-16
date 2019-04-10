@@ -21,6 +21,36 @@
   padding: 25px 0;
   background-color: white;
   cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icon-search.svg");
+    left: -43px;
+    top: 30px;
+    opacity: 0.3;
+  }
+}
+
+.search__label:hover {
+  color: rgba(0, 0, 0, 0.6);
+
+  &::before {
+    background-image: url("../img/icon-search_gr.svg");
+    opacity: 1;
+  }
+}
+
+.search__label:active {
+  color: rgba(0, 0, 0, 0.3);
+
+  &::before {
+    background-image: url("../img/icon-search_gr.svg");
+    opacity: 0.4;
+  }
 }
 
 .search__input:focus + .search__label {
