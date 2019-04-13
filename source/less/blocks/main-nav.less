@@ -25,12 +25,14 @@
 @media (min-width: 750px) {
   .main-nav {
     width: auto;
+    max-width: 62%;
     order: 1;
   }
 
   .main-nav__list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .main-nav__item {
@@ -66,11 +68,25 @@
   .main-nav {
     padding-left: 50px;
     border-bottom: 1px solid #ececec;
+    background-color: white;
+    max-width: 50%;
   }
 
   .main-nav__list {
     font-size: 17px;
     padding: 32px 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 500px;
+      width: 1000px;
+      left: -1000px;
+      bottom: 0;
+      background-color: white;
+    }
   }
 
   .main-nav__link {
