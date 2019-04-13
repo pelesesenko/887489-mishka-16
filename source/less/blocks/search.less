@@ -1,12 +1,13 @@
 .search {
   width: 100%;
-  padding: 20px 0 15px 24%;
+  padding: 20px 0 15px;
   position: relative;
   border-bottom: 1px solid #ececec;
 }
 
 .search__input {
   width: 90%;
+  margin: 0 5%;
   padding: 10px 0;
   position: relative;
   z-index: 2;
@@ -14,11 +15,11 @@
 
 .search__label {
   position: absolute;
-  width: 76%;
+  width: 100%;
   z-index: 3;
   top: 0;
-  left: 24%;
-  padding: 25px 0;
+  left: 0;
+  padding: 25px 0 25px 24%;
   background-color: white;
   cursor: pointer;
 
@@ -29,7 +30,8 @@
     width: 18px;
     height: 18px;
     background-image: url("../img/icon-search.svg");
-    left: -43px;
+    background-repeat: no-repeat;
+    left: 10%;
     top: 30px;
     opacity: 0.3;
   }
@@ -53,6 +55,95 @@
   }
 }
 
-.search__input:focus + .search__label {
-  z-index: 1;
+.search__input:focus {
+  z-index: 4;
+}
+
+.search__btn {
+  display: none;
+}
+
+@media (min-width: 750px) {
+  .search {
+    width: 10.9%;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border-left: 1px solid #ececec;
+    // position: static;
+  }
+
+  .search__input {
+    width: 260px;
+    margin: 0;
+    padding: 10px 0;
+    position: absolute;
+    right: -265px;
+  }
+
+  .search__label {
+    padding: 32px 0;
+    font-size: 0;
+    border-right: 1px solid #ececec;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &::before {
+      position: static;
+      margin: 3px auto 0;
+    }
+
+    .search__input:focus {
+      z-index: 4;
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .search {
+    width: 7.3%;
+  }
+
+  .search__btn {
+    display:block;
+    position: absolute;
+    border: none;
+    width: 100%;
+    height: 88px;
+    padding: 0;
+    background-color: white;
+    outline: none;
+    background-color: rgba(245, 245, 245, 0.6);
+
+    &:hover {
+      z-index: 5;
+      background-color: rgba(245, 245, 245, 1);
+    }
+
+    &:active {
+      z-index: 5;
+      background-color: rgba(245, 245, 245, 0.2);
+      outline: none;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background-image: url("../img/icon-search_gr.svg");
+      background-repeat: no-repeat;
+      left: 39.28%;
+      top: 37px;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+
+  .search__input:focus + .search__btn {
+    z-index: 5;
+  }
 }

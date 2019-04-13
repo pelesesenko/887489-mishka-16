@@ -3,41 +3,42 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header class="page-header">
-        <div class="page-header__logo-wrapper">
-            <a class="page-header__logo">
-                <img class="page-header__logo-image" src="./img/logo-mobile.svg" width="86" height="35" alt="Магазин 'Мишка'">
-            </a>
-        </div>
-        <button class="page-header__btn-menu"></button>
-        <div class="page-header__menu">
+    <header class="page-header page-header--index">
+        <div class="page-header__container">
+            <div class="page-header__logo-wrapper">
+                <a class="page-header__logo">
+                    <img class="page-header__logo-image" src="./img/logo-mobile.svg" width="86" height="35" alt="Магазин 'Мишка'">
+                </a>
+            </div>
+            <button class="page-header__btn-menu"></button>
             <nav class="main-nav">
                 <ul class="main-nav__list">
                     <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
                     <li class="main-nav__item"><a class="main-nav__link" href="form.html">Вязание на заказ</a></li>
                 </ul>
             </nav>
-            <form class="page-header__search search" action="https://echo.htmlacademy.ru"><input class="search__input" type="text" name="search__input" id="search__input">
-                <label class="search__label" for="search__input">Поиск по сайту</label>
+            <form class="page-header__search search" action="https://echo.htmlacademy.ru">
+                <label class="search__label" for="search__input" aria-label="Поиск по сайту">Поиск по сайту</label>
+                <input class="search__input" type="text" name="search__input" id="search__input">
+                <button class="search__btn" type="submit" aria-label="Поиск"></button>
             </form>
             <a class="page-header__cart cart" href="#">Корзина: пока пуста</a>
+            <ul class="page-header__profit">
+                <li class="page-header__new"><a class="page-header__link" href="#">Новые поступления</a></li>
+                <li class="page-header__sale"><a class="page-header__link" href="#">Распродажа</a></li>
+            </ul>
+            <a class="page-header__delivery" href="#">Бесплатная доставка по России</a>
         </div>
     </header>
 
     <main class="page-main">
         <section class="main-header">
-            <div class="main-header__menu">
-                <ul class="main-header__nav">
-                    <li class="main-header__link">Новые поступления</li>
-                    <li class="main-header__link">Распродажа</li>
-                </ul>
-                <a class="main-header__delivery" href="#">Бесплатная доставка по России</a>
-            </div>
             <h1 class="visually-hidden">Интернет-магазин "Мишка"</h1>
             <p class="main-header__description">Милые штуки ручной работы&nbsp;для дома</p>
             <div class="main-header__wrapper">

@@ -12,7 +12,8 @@
     width: 20px;
     height: 20px;
     background-image: url("../img/icon-cart.svg");
-    left: 30px;
+    background-repeat: no-repeat;
+    left: 10%;
     top: 28px;
     opacity: 0.3;
   }
@@ -36,3 +37,26 @@
   }
 }
 
+@media (min-width: 750px) {
+  .cart {
+    width: 315px;
+    padding: 33px 50px 0 0;
+    text-align: end;
+    border-bottom: 1px solid #ececec;
+    background-color: white;
+    z-index: 3;
+
+    &::before {
+      left: 32px;
+      top: 34px;
+      background-position: center;
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .cart {
+    width: 316px;
+    padding-top: 32px;
+  }
+}

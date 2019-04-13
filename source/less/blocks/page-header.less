@@ -1,11 +1,12 @@
-.page-header {
+.page-header__container {
+  width: 100%;
   min-width: 320px;
-  margin-top: 10px;
+  max-width: 550px;
+  margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
   .font(17px, 24px, bold);
   color: #000000;
 }
@@ -31,17 +32,18 @@
   border-top: 2px solid #221f1f;
   border-bottom: 2px solid #221f1f;
   top: 33px;
-  right: 30px;
+  right: 10%;
+  overflow: hidden;
 
   &::after {
     content: "";
     display: block;
     position: relative;
-    width: 20px;
+    width: 27px;
     height: 2px;
     background-color: #221f1f;
     top: 0;
-    left: -6px;
+    left: -8px;
   }
 }
 
@@ -49,7 +51,6 @@
   border: none;
 
   &::after {
-    width: 27px;
     left: -9px;
     top: -1px;
     transform: rotate(45deg);
@@ -68,14 +69,89 @@
   }
 }
 
-.page-header__menu {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.hao(~".page-header__btn-menu");
+
+
+.page-header__profit {
+  display: none;
 }
 
-// .page-header__logo{
-//   display: block;
-//   margin: 0 auto;
-// }
+.page-header__delivery {
+  display: none;
+}
+
+@media (min-width: 750px) {
+  .page-header {
+    background-image: linear-gradient(to bottom, white 88px, #f1f1f1 88px);
+  }
+
+  .page-header--index {
+    background-image: linear-gradient(to bottom, white 88px, #f9f9f9 88px);
+  }
+
+  .page-header__container {
+    max-width: 950px;
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  .page-header__logo-wrapper {
+    width: auto;
+    border-top: none;
+    padding: 24px 0 23px 6.67%;
+    justify-content: flex-start;
+    flex-grow: 1;
+  }
+
+  .page-header__btn-menu {
+    display: none;
+  }
+
+  .page-header__menu {
+    flex-direction: row;
+  }
+
+  .page-header__delivery {
+    display: block;
+    order: 2;
+    font-weight: normal;
+    font-size: 15px;
+    color: @444;
+    padding: 17px 50px 0 0;
+  }
+}
+
+@media (min-width: 1150px) {
+  .page-header__container {
+    max-width: 1450px;
+  }
+
+  .page-header__logo-wrapper {
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .page-header__logo{
+    margin-right: 75px;
+  }
+
+  .page-header__profit {
+    display: flex;
+    font-size: 15px;
+    list-style: none;
+    padding: 0;
+    padding-left: 50px;
+    padding-top: 17px;
+    margin: 0;
+    margin-right: auto;
+  }
+
+  .page-header__link {
+    color: black;
+    padding-right: 60px;
+  }
+}
