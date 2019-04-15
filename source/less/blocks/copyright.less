@@ -1,23 +1,34 @@
 .copyright {
+  width: 260px;
   display: flex;
-  justify-content: center;
-  padding: 14px 0 14px 5px;
+  padding: 22px 0 23px 38px;
+
+  &:hover .copyright__logo {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__text {
   .font(19px, 18px, bold);
-  padding-top: 13px;
+  color: black;
+  padding-top: 6px;
+  padding-right: 29px;
 }
 
-.copyright__link {
-  &::before {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 50px;
-    background-image: url("../img/htmlacademy_green.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-left: 21px;
+.copyright__logo {
+  width: 27px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .copyright {
+    width: 183px;
+    padding: 0;
+    padding-top: 7px;
   }
 }
