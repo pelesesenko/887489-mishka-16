@@ -127,15 +127,46 @@
 .order-form__container--fullname {
   padding-top: 28px;
 }
-
+//////////////////////////////////////////////////////////
 .order-form__fullname {
   border: none;
-  border-bottom: 2px solid black;
+  // border-bottom: 2px solid black;
   padding: 16px 0;
   margin-bottom: 22px;
   // opacity: 0.5;
 }
+///////////////////////////////////////////////////////////////////////////
+.order-form__cage {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
 
+.order-form__label-fullname {
+  position: relative;
+  order: -1;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 600px;
+    height: 2px;
+    // margin-left: 62px;
+    background-color: @lg;
+    position: absolute;
+    top: 70px;
+  }
+}
+
+.order-form__fullname::placeholder {
+  color: pink;
+}
+
+
+.order-form__fullname:hover + .order-form__label-fullname::after {
+  background-color: red;
+}
+//////////////////////////////////////////////////////////////////////////////////////////
 .order-form__fullname:hover {
   border-color: @lg;
 }
@@ -190,9 +221,7 @@
   margin: 31px 0 55px;
 }
 
-.order-form__cage {
-  display: block;
-}
+
 
 .order-form__contacts-icon {
   position: relative;
