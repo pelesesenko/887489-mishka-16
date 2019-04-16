@@ -9,10 +9,10 @@
 </head>
 
 <body>
-    <header class="page-header page-header--index">
+    <header class="page-header page-header--pages">
         <div class="page-header__container">
             <div class="page-header__logo-wrapper">
-                <a class="page-header__logo page-header__logo--link">
+                <a class="page-header__logo page-header__logo--link" href="index.html">
                     <img class="page-header__logo-image" src="./img/logo-mobile.svg" width="86" height="35" alt="Магазин 'Мишка'">
                 </a>
             </div>
@@ -38,12 +38,12 @@
     </header>
 
     <main class="page-main order">
-        <section class="main-header">
-            <h1 class="main-header__head h2">Вязание на заказ</h1>
-        </section>
-        <div class="order__wrapper">
-            <span class="order__tip">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</span>
+        <div class="main-header__container main-header__container--pages">
+            <section class="main-header">
+                <h1 class="main-header__head">Вязание на заказ</h1>
+            </section>
         </div>
+        <span class="order__tip">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</span>
         <form class="order__form order-form" action="https://echo.htmlacademy.ru" method="POST">
             <div class="order-form__wrapper">
                 <h2 class="order-form__header">ТИП</h2>
@@ -90,10 +90,10 @@
             <div class="order__wide-back">
                 <div class="order-form__wrapper order-form__wrapper--phone">
                     <h2 class="order-form__header">ТЕЛ</h2>
-                    <div class="order-form__cage">
-                        <input class="order-form__contacts order-form__contacts--phone" name="phone" type="tel" placeholder="+7 XXX XXX XX XX*">
-                        <div class="order-form__contacts-icon order-form__contacts-icon--phone"></div>
-                    </div>
+                    <!-- <div class="order-form__cage"> -->
+                    <input class="order-form__contacts order-form__contacts--phone" name="phone" type="tel" placeholder="+7 XXX XXX XX XX*">
+                    <div class="order-form__contacts-icon order-form__contacts-icon--phone"></div>
+                    <!-- </div> -->
                 </div>
                 <div class="order-form__wrapper order-form__wrapper--email">
                     <h2 class="order-form__header order-form__header--email">E-MAIL</h2>

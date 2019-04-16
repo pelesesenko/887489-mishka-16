@@ -9,10 +9,10 @@
 </head>
 
 <body>
-    <header class="page-header page-header--index">
+    <header class="page-header page-header--pages">
         <div class="page-header__container">
             <div class="page-header__logo-wrapper">
-                <a class="page-header__logo page-header__logo--link">
+                <a class="page-header__logo page-header__logo--link" href="index.html">
                     <img class="page-header__logo-image" src="./img/logo-mobile.svg" width="86" height="35" alt="Магазин 'Мишка'">
                 </a>
             </div>
@@ -38,47 +38,63 @@
     </header>
 
     <main class="page-main catalog">
-        <section class="main-header">
-            <h1 class="main-header__head h2">Каталог товаров</h1>
-        </section>
-        <section class="catalog__goods goods">
-            <h2 class="visually-hidden">Наши товары</h2>
-            <ul class="goods__list">
-                <li class="goods__item good-card">
-                    <a href="#">
-                        <img class="good-card__image" src="./img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
-                        <h3 class="good-card__header">Зайчик-попрыгайчик</h3>
-                    </a>
-                    <span class="good-card__description">Рост 30 см, Вес 200 г</span>
-                    <div class="good-card__wrapper">
-                        <b class="good-card__price">1 200 руб.</b>
-                        <button class="good-card__cart" type="button"><span class="visually-hidden">Корзина</span></button>
-                    </div>
-                </li>
-                <li class="goods__item good-card">
-                    <a href="#">
-                        <img class="good-card__image" src="./img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
-                        <h3 class="good-card__header">Корзинка для белья</h3>
-                    </a>
-                    <span class="good-card__description">Диаметр 15 см, высота 10 см</span>
-                    <div class="good-card__wrapper">
-                        <b class="good-card__price">690 руб.</b>
-                        <button class="good-card__cart" type="button"><span class="visually-hidden">Корзина</span></button>
-                    </div>
-                </li>
-                <li class="goods__item good-card">
-                    <a href="#">
-                        <img class="good-card__image" src="./img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
-                        <h3 class="good-card__header">Большая корзинка для игрушек</h3>
-                    </a>
-                    <span class="good-card__description">Диаметр 30 см, высота 30 см</span>
-                    <div class="good-card__wrapper">
-                        <b class="good-card__price">1 500 руб.</b>
-                        <button class="good-card__cart" type="button"><span class="visually-hidden">Корзина</span></button>
-                    </div>
-                </li>
-            </ul>
-        </section>
+        <div class="main-header__container main-header__container--pages">
+            <section class="main-header">
+                <h1 class="main-header__head">Каталог товаров</h1>
+            </section>
+        </div>
+        <div class="catalog__goods--wrapper">
+            <section class="catalog__goods goods">
+                <h2 class="visually-hidden">Наши товары</h2>
+                <ul class="goods__list">
+                    <li class="goods__item good-card">
+                        <a class="good-card__image-wrap" href="#">
+                            <img class="good-card__image" src="./img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
+                        </a>
+                        <div class="good-card__wrapper">
+                            <a href="#">
+                                <h3 class="good-card__header">Зайчик-попрыгайчик</h3>
+                            </a>
+                            <span class="good-card__description">Рост 30 см, вес 200 г</span>
+                            <div class="good-card__bottom">
+                                <b class="good-card__price">1 200 руб.</b>
+                                <button class="good-card__cart" type="button"><span class="visually-hidden">Корзина</span></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="goods__item good-card">
+                        <a class="good-card__image-wrap" href="#">
+                            <img class="good-card__image" src="./img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
+                        </a>
+                        <div class="good-card__wrapper">
+                            <a href="#">
+                                <h3 class="good-card__header">Корзинка для белья</h3>
+                            </a>
+                            <span class="good-card__description">Диаметр 15 см, высота 10 см</span>
+                            <div class="good-card__bottom">
+                                <b class="good-card__price">690 руб.</b>
+                                <button class="good-card__cart" type="button"><span class="visually-hidden">Корзина</span></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="goods__item good-card">
+                        <a class="good-card__image-wrap" href="#">
+                            <img class="good-card__image" src="./img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
+                        </a>
+                        <div class="good-card__wrapper">
+                            <a href="#">
+                                <h3 class="good-card__header">Большая корзинка для&nbsp;игрушек</h3>
+                            </a>
+                            <span class="good-card__description">Диаметр 30 см, высота 30 см</span>
+                            <div class="good-card__bottom">
+                                <b class="good-card__price">1 500 руб.</b>
+                                <button class="good-card__cart" type="button"><span class="visually-hidden">Корзина</span></button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
         <section class="modal">
             <h1 class="modal__header">Добавить в корзину</h1>
             <span class="modal__proposition"></span>
@@ -93,17 +109,19 @@
         </section>
         <section class="catalog__making making">
 
-            <h3 class="making__header">Процесс производства</h3>
+            <div class="making__wrapper">
+                <h3 class="making__header">Процесс производства</h3>
 
-            <div class="making__container">
-                <img class="making__image" src="./img/video-mobile@1x.jpg" alt="Процесс производства" width="260" height="150">
-            </div>
-            <div class="making__bottom">
+                <div class="making__container">
+                    <img class="making__image" src="./img/video-mobile@1x.jpg" alt="Процесс производства" width="260" height="150">
+                </div>
+                <div class="making__bottom">
 
-                <!-- <h3 class="making__header making__header--descktop">Процесс производства</h3> -->
+                    <!-- <h3 class="making__header making__header--descktop">Процесс производства</h3> -->
 
-                <p class="making__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-                <a class="making__btn btn" href="form.html">Сделать заказ</a>
+                    <p class="making__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+                    <a class="making__btn btn" href="form.html">Сделать заказ</a>
+                </div>
             </div>
         </section>
     </main>

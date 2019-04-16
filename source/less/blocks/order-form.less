@@ -1,7 +1,8 @@
 .order-form__wrapper {
-  width: 320px;
+  min-width: 320px;
+  max-width: 650px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 9.38%;
   display: flex;
   flex-direction: column;
 }
@@ -11,22 +12,24 @@
   line-height: 16px;
   color: @lg;
   margin: 0;
+  position: relative;
+  overflow: hidden;
 
   &::after {
     content: "";
     display: block;
-    width: 198px;
+    width: 600px;
     height: 1px;
-    margin-left: auto;
+    margin-left: 62px;
     background-color: @lg;
-    position: relative;
-    top: -8px;
+    position: absolute;
+    top: 7px;
   }
 }
 
 .order-form__header--email {
   &::after {
-    width: 179px;
+    margin-left: 75px;
   }
 }
 
@@ -49,6 +52,10 @@
 .order-form__label {
   line-height: 18px;
   position: relative;
+}
+
+.order-form__label--type:nth-of-type(1) {
+  min-height: 61px;
 }
 
 .order-form__label--type,
@@ -136,7 +143,6 @@
 .order-form__fullname:focus {
   opacity: 1;
   border-color: @lg;
-  border-width: 1px;
   outline: none;
 }
 
@@ -215,4 +221,12 @@
     background-image: url("../img/icon-mail.svg");
     right: 5px;
   }
+}
+
+.order-form__contacts:hover + .order-form__contacts-icon {
+  background-color: @lg;
+}
+
+.order-form__contacts:focus + .order-form__contacts-icon {
+  background-color: @lg;
 }
