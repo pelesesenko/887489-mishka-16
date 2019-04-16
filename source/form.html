@@ -43,7 +43,9 @@
                 <h1 class="main-header__head">Вязание на заказ</h1>
             </section>
         </div>
-        <span class="order__tip">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</span>
+        <div class="order__tip-wrap">
+            <span class="order__tip">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и&nbsp;мы свяжемся с вами, чтобы уточнить детали.</span>
+        </div>
         <form class="order__form order-form" action="https://echo.htmlacademy.ru" method="POST">
             <div class="order-form__wrapper">
                 <h2 class="order-form__header">ТИП</h2>
@@ -57,7 +59,7 @@
                 </div>
             </div>
             <div class="order__wide-back">
-                <div class="order-form__wrapper">
+                <div class="order-form__wrapper order-form__wrapper--color">
                     <h2 class="order-form__header">ЦВЕТ</h2>
                     <div class="order-form__container order-form__container--color">
                         <input class="order-form__color" type="checkbox" name="white" id="white" checked>
@@ -77,27 +79,33 @@
                 </div>
             </div>
             <div class="order-form__wrapper">
-                <h2 class="order-form__header">ФИО</h2>
+                <h2 class="order-form__header order-form__header--fullname">ФИО</h2>
                 <div class="order-form__container order-form__container--fullname">
-                    <label class="order-form__label" for="firstname">Имя:</label>
-                    <input class="order-form__fullname" type="text" name="firstname" placeholder="Введите ваше имя*" id="firstname">
-                    <label class="order-form__label" for="surname">Фамилия:</label>
-                    <input class="order-form__fullname" type="text" name="surname" placeholder="Укажите фамилию*" id="surname">
-                    <label class="order-form__label" for="patronymic">Отчество:</label>
-                    <input class="order-form__fullname" type="text" name="patronymic" placeholder="Отчество, если желаете" id="patronymic">
+                    <div class="order-form__cage">
+                        <label class="order-form__label" for="firstname">Имя:</label>
+                        <input class="order-form__fullname" type="text" name="firstname" placeholder="Введите ваше имя*" id="firstname">
+                    </div>
+                    <div class="order-form__cage">
+                        <label class="order-form__label" for="surname">Фамилия:</label>
+                        <input class="order-form__fullname" type="text" name="surname" placeholder="Укажите фамилию*" id="surname">
+                    </div>
+                    <div class="order-form__cage">
+                        <label class="order-form__label" for="patronymic">Отчество:</label>
+                        <input class="order-form__fullname order-form__fullname--last" type="text" name="patronymic" placeholder="Отчество, если желаете" id="patronymic">
+                    </div>
                 </div>
             </div>
             <div class="order__wide-back">
                 <div class="order-form__wrapper order-form__wrapper--phone">
                     <h2 class="order-form__header">ТЕЛ</h2>
-                    <!-- <div class="order-form__cage"> -->
-                    <input class="order-form__contacts order-form__contacts--phone" name="phone" type="tel" placeholder="+7 XXX XXX XX XX*">
-                    <div class="order-form__contacts-icon order-form__contacts-icon--phone"></div>
-                    <!-- </div> -->
+                    <div class="order-form__container">
+                        <input class="order-form__contacts order-form__contacts--phone" name="phone" type="tel" placeholder="+7 XXX XXX XX XX*">
+                        <div class="order-form__contacts-icon order-form__contacts-icon--phone"></div>
+                    </div>
                 </div>
                 <div class="order-form__wrapper order-form__wrapper--email">
                     <h2 class="order-form__header order-form__header--email">E-MAIL</h2>
-                    <div class="order-form__cage">
+                    <div class="order-form__container">
                         <input class="order-form__contacts order-form__contacts--email" name="email" type="email" placeholder="Ваш Email*">
                         <div class="order-form__contacts-icon order-form__contacts-icon--email"></div>
                     </div>

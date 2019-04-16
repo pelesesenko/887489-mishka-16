@@ -4,6 +4,11 @@
   color: black;
 }
 
+.order__tip-wrap {
+  width: 100%;
+  background-color: white;
+}
+
 .order__tip {
   display: block;
   min-width: 320px;
@@ -14,6 +19,23 @@
   font-size: 13px;
   color: @444;
 }
-// .order__wide-back{
-//   background-color: #f1f1f1;
-// }
+
+@media (min-width: 768px) {
+  .order__tip-wrap {
+    position: relative;
+    margin-top: -10px;
+  }
+
+  .order__tip {
+    font-size: 17px;
+    line-height: 30px;
+    max-width: 950px;
+    padding: 72px 13% 50px 6.5%;
+    margin: 0 auto;
+    font-weight: normal;
+  }
+
+  .order__wide-back {
+    background-color: #f1f1f1;
+  }
+}
