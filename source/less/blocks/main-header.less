@@ -15,10 +15,6 @@
   background-color: #f1f1f1;
 }
 
-.main-header__menu {
-  display: none;
-}
-
 .main-header__head {
   font-size: 27px;
   line-height: 30px;
@@ -134,5 +130,36 @@
       right: 31px;
       top: 28px;
     }
+  }
+}
+
+@media (min-width: 1150px) {
+  .main-header {
+    padding-bottom: 8px;
+    max-width: 1250px;
+
+
+    &::after {
+      height: 37px;
+      margin-left: 11px;
+    }
+  }
+
+  .main-header__description {
+    font-size: 53px;
+    line-height: 57px;
+    padding: 112px 250px 359px;
+    background: url("../img/hero-desktop@1x.jpg") center 26%;
+  }
+
+  .main-header__head {
+    font-size: 53px;
+    line-height: 57px;
+    margin-top: 37px;
+    margin-bottom: 82px;
+  }
+
+  .main-header__button {
+    padding: 28px 350px 43px 37px;
   }
 }
