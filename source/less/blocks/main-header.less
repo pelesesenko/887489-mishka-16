@@ -135,10 +135,14 @@
 
 @media (min-width: 1150px) {
   .main-header {
-    padding-bottom: 8px;
     max-width: 1250px;
 
+    &::after {
+      height: 30px;
+    }
+  }
 
+  .main-header--index {
     &::after {
       height: 37px;
       margin-left: 11px;
@@ -155,8 +159,8 @@
   .main-header__head {
     font-size: 53px;
     line-height: 57px;
-    margin-top: 37px;
-    margin-bottom: 82px;
+    margin-top: 53px;
+    margin-bottom: 108px;
   }
 
   .main-header__button {

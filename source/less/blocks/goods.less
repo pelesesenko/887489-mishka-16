@@ -20,9 +20,20 @@
   }
 }
 
-// @media (min-width: 1150px) {
-//  .goods__list {
-//    display: flex;
-//    flex-direction: column;
-//  }
-//}
+@media (min-width: 1150px) {
+  .goods__list {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  .goods__item {
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 30px;
+  }
+
+  .goods__item:nth-child(3n) {
+    margin-right: 0;
+  }
+}
