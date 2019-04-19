@@ -1,7 +1,8 @@
 .order-form__wrapper {
-  width: 320px;
+  min-width: 320px;
+  max-width: 650px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 9.38%;
   display: flex;
   flex-direction: column;
 }
@@ -11,29 +12,31 @@
   line-height: 16px;
   color: @lg;
   margin: 0;
+  position: relative;
+  overflow: hidden;
 
   &::after {
     content: "";
     display: block;
-    width: 198px;
+    width: 600px;
     height: 1px;
-    margin-left: auto;
+    margin-left: 62px;
     background-color: @lg;
-    position: relative;
-    top: -8px;
+    position: absolute;
+    top: 7px;
   }
 }
 
 .order-form__header--email {
   &::after {
-    width: 179px;
+    margin-left: 75px;
   }
 }
 
 .order-form__container {
   display: flex;
   flex-direction: column;
-  padding-top: 33px;
+  padding-top: 35px;
   padding-bottom: 18px;
 }
 
@@ -49,6 +52,10 @@
 .order-form__label {
   line-height: 18px;
   position: relative;
+}
+
+.order-form__label--type:nth-of-type(1) {
+  min-height: 60px;
 }
 
 .order-form__label--type,
@@ -117,8 +124,23 @@
   display: block;
 }
 
+.order-form__label--type:hover,
+.order-form__label--color:hover {
+  &::before {
+    border-color: @lg;
+  }
+}
+
+.order-form__label--type:active,
+.order-form__label--color:active {
+  &::before {
+    border-color: #c7c7c7;
+  }
+}
+
 .order-form__container--fullname {
-  padding-top: 28px;
+  padding-top: 29px;
+  padding-bottom: 33px;
 }
 
 .order-form__fullname {
@@ -126,7 +148,17 @@
   border-bottom: 2px solid black;
   padding: 16px 0;
   margin-bottom: 22px;
-  // opacity: 0.5;
+}
+
+.order-form__fullname--last {
+  margin-bottom: 0;
+  padding-top: 15px;
+}
+
+.order-form__cage {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
 }
 
 .order-form__fullname:hover {
@@ -136,18 +168,13 @@
 .order-form__fullname:focus {
   opacity: 1;
   border-color: @lg;
-  border-width: 1px;
   outline: none;
-}
-
-.order-form__fullname:last-of-type {
-  margin-bottom: 13px;
 }
 
 .order-form__contacts {
   border: none;
+  border-bottom: 2px solid black;
   padding: 16px 0 14px;
-  opacity: 0.5;
 }
 
 .order-form__fullname,
@@ -157,6 +184,11 @@
   font: unset;
   .font(17px, 18px, normal);
   color: @444;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+  }
 }
 
 .order-form__contacts--phone {
@@ -167,11 +199,64 @@
   padding: 21px 0 17px;
 }
 
+.order-form__contacts-icon {
+  position: relative;
+  width: 100%;
+  margin-bottom: 33px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 24px;
+    background-image: url("../img/icon-phone.svg");
+    right: 8px;
+    top: -41px;
+    opacity: 0.2;
+  }
+}
+
+.order-form__contacts-icon--email {
+  &::after {
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/icon-mail.svg");
+    right: 5px;
+  }
+}
+
+.order-form__contacts:hover {
+  border-color: @lg;
+}
+
+.order-form__contacts:focus {
+  border-color: @lg;
+  outline: none;
+}
+
+.order-form__contacts:focus + .order-form__contacts-icon::after,
+.order-form__contacts:hover + .order-form__contacts-icon::after {
+  background-image: url("../img/icon-phone_gr.svg");
+  opacity: 1;
+}
+
+.order-form__contacts:focus + .order-form__contacts-icon--email::after,
+.order-form__contacts:hover + .order-form__contacts-icon--email::after {
+  background-image: url("../img/icon-mail_gr.svg");
+}
+
 .order-form__add {
   margin: 24px 0 16px;
   padding: 15px;
   border: 2px solid @444;
   resize: none;
+}
+
+.order-form__add:hover,
+.order-form__add:focus {
+  border-color: @lg;
+  outline: none;
 }
 
 .order-form__note {
@@ -184,35 +269,156 @@
   margin: 31px 0 55px;
 }
 
-.order-form__cage {
-  display: block;
-}
-
-.order-form__contacts-icon {
-  position: relative;
-  width: 100%;
-  height: 2px;
-  background-color: black;
-  margin-bottom: 32px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 25px;
-    height: 24px;
-    background-image: url("../img/icon-phone.svg");
-    right: 8px;
-    top: -39px;
-    opacity: 0.2;
+@media (min-width: 768px) {
+  .order-form__wrapper {
+    flex-direction: row;
+    max-width: 950px;
+    padding: 23px 6.5% 0;
+    align-items: baseline;
   }
-}
 
-.order-form__contacts-icon--email {
-  &::after {
-    width: 32px;
-    height: 32px;
-    background-image: url("../img/icon-mail.svg");
-    right: 5px;
+  .order-form__wrapper--color {
+    padding-top: 65px;
+  }
+
+  .order-form__wrapper--phone {
+    padding-top: 48px;
+  }
+
+  .order-form__wrapper--email {
+    padding-top: 9px;
+    padding-bottom: 37px;
+  }
+
+  .order-form__container {
+    width: 75%;
+    flex-shrink: 0;
+    padding-top: 0;
+    padding-bottom: 13px;
+  }
+
+  .order-form__container--color {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+
+  .order-form__container--fullname {
+    padding-top: 25px;
+    padding-bottom: 28px;
+  }
+
+  .order-form__header {
+    margin-right: auto;
+    padding: 2px 0 0 2px;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .order-form__label {
+    font-size: 19px;
+  }
+
+  .order-form__label--type:nth-of-type(1) {
+    min-height: unset;
+  }
+
+  .order-form__label--type {
+    padding-left: 80px;
+    padding-bottom: 57px;
+
+    &::before {
+      width: 52px;
+      height: 52px;
+      left: 0;
+      top: -16px;
+    }
+
+    &::after {
+      width: 21px;
+      height: 21px;
+      left: 15px;
+      top: 0;
+    }
+  }
+
+  .order-form__label--color {
+    width: 47.6%;
+    padding-left: 80px;
+    padding-bottom: 58px;
+
+    &::before {
+      width: 54px;
+      height: 52px;
+      left: -1px;
+      top: -16px;
+    }
+
+    &::after {
+      width: 15px;
+      height: 30px;
+      left: 20px;
+      top: -9px;
+    }
+  }
+
+  .order-form__cage {
+    flex-direction: row;
+    align-items: baseline;
+    padding-bottom: 22px;
+  }
+
+  .order-form__fullname,
+  .order-form__contacts,
+  .order-form__add {
+    font-size: 19px;
+    padding: 13px 15px;
+  }
+
+  .order-form__fullname {
+    width: auto;
+    flex-grow: 1;
+    margin-bottom: 0;
+    margin-left: 25px;
+  }
+
+  .order-form__contacts {
+    background-color: #f1f1f1;
+  }
+
+  .order-form__contacts-icon--phone {
+    margin: 0;
+
+    &::after {
+      right: 26px;
+    }
+  }
+
+  .order-form__contacts-icon--email {
+    margin: 0;
+
+    &::after {
+      right: 22px;
+    }
+  }
+
+  .order-form__add {
+    width: 75%;
+    margin: 27px 0 10px;
+    padding-bottom: 17px;
+  }
+
+  .order-form__btn {
+    order: -1;
+    width: 230px;
+    margin: 20px auto 50px 0;
+  }
+
+  .order-form__note {
+    font-size: 17px;
+    line-height: 30px;
   }
 }

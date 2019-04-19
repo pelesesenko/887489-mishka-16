@@ -9,9 +9,19 @@
   font-weight: @font-weight;
 }
 
+.hao(@selector) {    //Hover+Active by Opacity
+  @{selector}:hover {
+    opacity: 0.6;
+  }
+
+  @{selector}:active {
+    opacity: 0.3;
+  }
+}
+
 body {
   margin: 0;
-  width: 320px;
+  // width: 1150px;
 }
 
 img {

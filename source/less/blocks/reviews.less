@@ -1,6 +1,8 @@
-.reviews {
+.reviews__wrapper {
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
   padding: 0 9% 44px;
-  font-size: 0;
 }
 
 .reviews__message {
@@ -13,6 +15,10 @@
   margin-top: 16px;
 }
 
+.reviews__bottom {
+  font-size: 0;
+}
+
 .reviews__fullname {
   font-size: 17px;
 }
@@ -22,12 +28,11 @@
   font-weight: normal;
   line-height: 26px;
   color: @444;
-  display: inline-block;
+  display: block;
   margin-bottom: 30px;
 }
 
 .reviews__arrow {
-  display: inline-block;
   padding: 0;
   width: 50%;
   height: 52px;
@@ -51,5 +56,105 @@
 
 .reviews__btn {
   width: 100%;
-  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .reviews {
+    max-width: 950px;
+    margin: 0 auto;
+    margin-bottom: 68px;
+  }
+
+  .reviews__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    max-width: unset;
+    min-height: 457px;
+    padding: 77px 6.51% 46px;
+    position: relative;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  .reviews__header {
+    margin-left: -5px;
+    padding-right: 190px;
+  }
+
+  .reviews__message {
+    font-size: 17px;
+    padding: 49px 20px 20px 0;
+    margin: 0;
+  }
+
+  .reviews__fullname {
+    font-size: 18px;
+  }
+
+  .reviews__username {
+    line-height: 30px;
+    margin: -3px 0 0 0;
+  }
+
+  .reviews__bottom {
+    display: flex;
+    margin-top: auto;
+  }
+
+  .reviews__author {
+    margin-right: auto;
+  }
+
+  .reviews__arrow {
+    width: 88px;
+    border: none;
+    margin-bottom: 0;
+    margin-top: 3px;
+
+    &--left {
+      width: 87px;
+    }
+  }
+
+  .reviews__btn {
+    width: 175px;
+    position: absolute;
+    right: 6.51%;
+    top: 79px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .reviews {
+    max-width: 1250px;
+    margin-bottom: 68px;
+    background: none;
+  }
+
+  .reviews__wrapper {
+    max-width: unset;
+    margin: 0 50px;
+    padding: 70px 8.7% 95px 15.2%;
+  }
+
+  .reviews__message {
+    padding: 49px 80px 20px 0;
+  }
+
+  .reviews__fullname {
+    font-size: 17px;
+  }
+
+  .reviews__arrow {
+    margin-top: 2px;
+  }
+
+  .reviews__btn {
+    width: 175px;
+    position: absolute;
+    right: 8.7%;
+    top: 79px;
+  }
 }
