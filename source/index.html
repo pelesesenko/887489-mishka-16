@@ -84,17 +84,19 @@
                 </div>
             </section>
         </div>
-        <section class="modal">
-            <h1 class="modal__header">Добавить в корзину</h1>
-            <span class="modal__proposition"></span>
-            <form class="modal__form cart-add" action="https://echo.htmlacademy.ru">
-                <div class="cart-add__wrapper">
-                    <label class="cart-add__label"><input class="cart-add__size" type="checkbox" name="s" checked></label>
-                    <label class="cart-add__label"><input class="cart-add__size" type="checkbox" name="m"></label>
-                    <label class="cart-add__label"><input class="cart-add__size" type="checkbox" name="l"></label>
-                </div>
-                <button class="cart-add__btn btn" type="submit">Добавить</button>
+        <section class="modal cart-add">
+            <h1 class="cart-add__header">Добавить в корзину</h1>
+            <span class="cart-add__proposition">Выберите размер:</span>
+            <form class="cart-add__form" action="https://echo.htmlacademy.ru">
+                <input class="cart-add__size visually-hidden" type="checkbox" name="s" id="size-s" checked>
+                <label class="cart-add__label" for="size-s">S</label>
+                <input class="cart-add__size visually-hidden" type="checkbox" name="m" id="size-m">
+                <label class="cart-add__label" for="size-m">M</label>
+                <input class="cart-add__size visually-hidden" type="checkbox" name="l" id="size-l">
+                <label class="cart-add__label" for="size-l">L</label>
+                <button class="cart-add__btn" type="submit">Добавить</button>
             </form>
+            <button class="modal__close"><span class="visually-hidden">Закрыть</span></button>
         </section>
         <section class="about">
             <h2 class="about__header h2">Коротко о нас:</h2>
@@ -192,6 +194,7 @@
             </a>
         </div>
     </footer>
+    <div class="modal__overlay "></div>
 </body>
 
 </html>
