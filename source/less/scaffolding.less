@@ -1,6 +1,15 @@
 @font-family: "Open Sans", "Arial", sans-serif;
 @444: #444444;
 @lg: #63d1bb;
+@keyframes modal-show {
+  0% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
 
 .font(@font-size, @line-height: normal, @font-weight: normal) {
   font-family: @font-family;
@@ -21,7 +30,7 @@
 
 body {
   margin: 0;
-  // width: 1150px;
+  width: 320px;
 }
 
 img {
