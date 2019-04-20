@@ -17,7 +17,7 @@
                 </a>
             </div>
             <button class="page-header__btn-menu"></button>
-            <nav class="main-nav">
+            <nav class="page-header__nav main-nav">
                 <ul class="main-nav__list">
                     <li class="main-nav__item"><a class="main-nav__link">Каталог товаров</a></li>
                     <li class="main-nav__item"><a class="main-nav__link" href="form.html">Вязание на заказ</a></li>
@@ -29,11 +29,13 @@
                 <button class="search__btn" type="submit" aria-label="Поиск"></button>
             </form>
             <a class="page-header__cart cart" href="#">Корзина: пока пуста</a>
-            <ul class="page-header__profit">
-                <li class="page-header__new"><a class="page-header__link" href="#">Новые поступления</a></li>
-                <li class="page-header__sale"><a class="page-header__link" href="#">Распродажа</a></li>
-            </ul>
-            <a class="page-header__delivery" href="#">Бесплатная доставка по России</a>
+            <div class="page-header__bottom page-header__bottom--pages">
+                <ul class="page-header__profit">
+                    <li class="page-header__new"><a class="page-header__link" href="#">Новые поступления</a></li>
+                    <li class="page-header__sale"><a class="page-header__link" href="#">Распродажа</a></li>
+                </ul>
+                <a class="page-header__delivery" href="#">Бесплатная доставка по России</a>
+            </div>
         </div>
     </header>
 
@@ -52,7 +54,7 @@
                             <img class="good-card__image" src="./img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
                         </a>
                         <div class="good-card__wrapper">
-                            <a href="#">
+                            <a class="good-card__link" href="#">
                                 <h3 class="good-card__header">Зайчик-попрыгайчик</h3>
                             </a>
                             <span class="good-card__description">Рост 30 см, вес 200 г</span>
@@ -67,7 +69,7 @@
                             <img class="good-card__image" src="./img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
                         </a>
                         <div class="good-card__wrapper">
-                            <a href="#">
+                            <a class="good-card__link" href="#">
                                 <h3 class="good-card__header">Корзинка для белья</h3>
                             </a>
                             <span class="good-card__description">Диаметр 15 см, высота 10 см</span>
@@ -82,7 +84,7 @@
                             <img class="good-card__image" src="./img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
                         </a>
                         <div class="good-card__wrapper">
-                            <a href="#">
+                            <a class="good-card__link" href="#">
                                 <h3 class="good-card__header">Большая корзинка для&nbsp;игрушек</h3>
                             </a>
                             <span class="good-card__description">Диаметр 30 см, высота 30 см</span>
@@ -114,11 +116,9 @@
 
                 <div class="making__container">
                     <img class="making__image" src="./img/video-mobile@1x.jpg" alt="Процесс производства" width="260" height="150">
+                    <button class="making__play-btn"><span class="visually-hidden">Видео</span></button>
                 </div>
                 <div class="making__bottom">
-
-                    <!-- <h3 class="making__header making__header--descktop">Процесс производства</h3> -->
-
                     <p class="making__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
                     <a class="making__btn btn" href="form.html">Сделать заказ</a>
                 </div>
