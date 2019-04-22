@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="./js/app.js" defer></script>
 </head>
 
 <body>
@@ -16,19 +17,19 @@
                     <img class="page-header__logo-image" src="./img/logo-mobile.svg" width="86" height="35" alt="Магазин 'Мишка'">
                 </a>
             </div>
-            <button class="page-header__btn-menu"></button>
-            <nav class="page-header__nav main-nav">
+            <button class="page-header__btn-menu page-header__btn-menu--close" data-mobile-menu="toggle"></button>
+            <nav class="page-header__nav main-nav" data-mobile-menu="item">
                 <ul class="main-nav__list">
                     <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
                     <li class="main-nav__item"><a class="main-nav__link" href="form.html">Вязание на заказ</a></li>
                 </ul>
             </nav>
-            <form class="page-header__search search" action="https://echo.htmlacademy.ru">
+            <form class="page-header__search search" action="https://echo.htmlacademy.ru" data-mobile-menu="item">
                 <label class="search__label" for="search__input" aria-label="Поиск по сайту">Поиск по сайту</label>
                 <input class="search__input" type="text" name="search__input" id="search__input">
                 <button class="search__btn" type="submit" aria-label="Поиск"></button>
             </form>
-            <a class="page-header__cart cart" href="#">Корзина: пока пуста</a>
+            <a class="page-header__cart cart" href="#" data-mobile-menu="item">Корзина: пока пуста</a>
             <div class="page-header__bottom">
                 <ul class="page-header__profit">
                     <li class="page-header__new"><a class="page-header__link" href="#">Новые поступления</a></li>
@@ -40,7 +41,7 @@
     </header>
 
     <main class="page-main">
-        <div class="main-header__container">
+        <div class="page-main__main-header">
             <section class="main-header main-header--index">
                 <h1 class="visually-hidden">Интернет-магазин "Мишка"</h1>
                 <p class="main-header__description">Милые штуки ручной работы&nbsp;для дома</p>
@@ -50,7 +51,7 @@
                 </div>
             </section>
         </div>
-        <div class="week-product__container">
+        <div class="page-main__week-product">
             <section class="week-product">
                 <div class="week-product__wrap-header">
                     <h2 class="week-product__header h2">Вязаные корзинки</h2>
@@ -80,24 +81,28 @@
                 </div>
                 <div class="week-product__wrap-bottom">
                     <p class="week-product__price">Цена: 990 руб.</p>
-                    <a class="week-product__btn btn" href="#">Заказать</a>
+                    <a class="week-product__btn btn" href="#" data-modal-opener="cart">Заказать</a>
                 </div>
             </section>
         </div>
-        <section class="modal cart-add">
-            <h1 class="cart-add__header">Добавить в корзину</h1>
-            <span class="cart-add__proposition">Выберите размер:</span>
-            <form class="cart-add__form" action="https://echo.htmlacademy.ru">
-                <input class="cart-add__size visually-hidden" type="checkbox" name="s" id="size-s" checked>
-                <label class="cart-add__label" for="size-s">S</label>
-                <input class="cart-add__size visually-hidden" type="checkbox" name="m" id="size-m">
-                <label class="cart-add__label" for="size-m">M</label>
-                <input class="cart-add__size visually-hidden" type="checkbox" name="l" id="size-l">
-                <label class="cart-add__label" for="size-l">L</label>
-                <button class="cart-add__btn" type="submit">Добавить</button>
-            </form>
-            <button class="modal__close"><span class="visually-hidden">Закрыть</span></button>
-        </section>
+        <div class="modal" data-modal="cart">
+            <div class="modal__wrapper">
+                <button class="modal__close" data-modal-btn><span class="visually-hidden">Закрыть</span></button>
+                <section class="cart-add">
+                    <h1 class="cart-add__header">Добавить в корзину</h1>
+                    <span class="cart-add__proposition">Выберите размер:</span>
+                    <form class="cart-add__form" action="https://echo.htmlacademy.ru">
+                        <input class="cart-add__size visually-hidden" type="checkbox" name="s" id="size-s" checked>
+                        <label class="cart-add__label" for="size-s">S</label>
+                        <input class="cart-add__size visually-hidden" type="checkbox" name="m" id="size-m">
+                        <label class="cart-add__label" for="size-m">M</label>
+                        <input class="cart-add__size visually-hidden" type="checkbox" name="l" id="size-l">
+                        <label class="cart-add__label" for="size-l">L</label>
+                        <button class="cart-add__btn" type="submit">Добавить</button>
+                    </form>
+                </section>
+            </div>
+        </div>
         <section class="about">
             <h2 class="about__header h2">Коротко о нас:</h2>
             <ul class="about__list">
@@ -194,7 +199,6 @@
             </a>
         </div>
     </footer>
-    <div class="modal__overlay "></div>
 </body>
 
 </html>

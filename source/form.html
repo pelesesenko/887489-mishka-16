@@ -6,6 +6,7 @@
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <script src="./js/app.js" defer></script>
 </head>
 
 <body>
@@ -16,19 +17,19 @@
                     <img class="page-header__logo-image" src="./img/logo-mobile.svg" width="86" height="35" alt="Магазин 'Мишка'">
                 </a>
             </div>
-            <button class="page-header__btn-menu"></button>
-            <nav class="page-header__nav main-nav">
+            <button class="page-header__btn-menu page-header__btn-menu--close" data-mobile-menu="toggle"></button>
+            <nav class="page-header__nav main-nav" data-mobile-menu="item">
                 <ul class="main-nav__list">
                     <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
                     <li class="main-nav__item"><a class="main-nav__link">Вязание на заказ</a></li>
                 </ul>
             </nav>
-            <form class="page-header__search search" action="https://echo.htmlacademy.ru">
+            <form class="page-header__search search" action="https://echo.htmlacademy.ru" data-mobile-menu="item">
                 <label class="search__label" for="search__input" aria-label="Поиск по сайту">Поиск по сайту</label>
                 <input class="search__input" type="text" name="search__input" id="search__input">
                 <button class="search__btn" type="submit" aria-label="Поиск"></button>
             </form>
-            <a class="page-header__cart cart" href="#">Корзина: пока пуста</a>
+            <a class="page-header__cart cart" href="#" data-mobile-menu="item">Корзина: пока пуста</a>
             <div class="page-header__bottom page-header__bottom--pages">
                 <ul class="page-header__profit">
                     <li class="page-header__new"><a class="page-header__link" href="#">Новые поступления</a></li>
@@ -40,7 +41,7 @@
     </header>
 
     <main class="page-main order">
-        <div class="main-header__container main-header__container--pages">
+        <div class="page-main__main-header page-main__main-header--pages">
             <section class="main-header">
                 <h1 class="main-header__head">Вязание на заказ</h1>
             </section>
@@ -60,7 +61,7 @@
                   </label>
                 </div>
             </div>
-            <div class="order__wide-back">
+            <div class="order-form__wide-back">
                 <div class="order-form__wrapper order-form__wrapper--color">
                     <h2 class="order-form__header">ЦВЕТ</h2>
                     <div class="order-form__container order-form__container--color">
@@ -97,17 +98,17 @@
                     </div>
                 </div>
             </div>
-            <div class="order__wide-back">
+            <div class="order-form__wide-back">
                 <div class="order-form__wrapper order-form__wrapper--phone">
                     <h2 class="order-form__header">ТЕЛ</h2>
-                    <div class="order-form__container">
+                    <div class="order-form__container order-form__container--contacts">
                         <input class="order-form__contacts order-form__contacts--phone" name="phone" type="tel" placeholder="+7 XXX XXX XX XX*" required>
                         <div class="order-form__contacts-icon order-form__contacts-icon--phone"></div>
                     </div>
                 </div>
                 <div class="order-form__wrapper order-form__wrapper--email">
                     <h2 class="order-form__header order-form__header--email">E-MAIL</h2>
-                    <div class="order-form__container">
+                    <div class="order-form__container order-form__container--contacts">
                         <input class="order-form__contacts order-form__contacts--email" name="email" type="email" placeholder="Ваш Email*" required>
                         <div class="order-form__contacts-icon order-form__contacts-icon--email"></div>
                     </div>
