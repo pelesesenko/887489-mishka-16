@@ -1,7 +1,6 @@
 .cart-add {
   text-align: center;
   border-top: 2px solid #c7c7c7;
-  box-shadow: 0 10px 10px 0 lightgrey;
 }
 
 .cart-add__header {
@@ -30,7 +29,8 @@
 }
 
 .cart-add__label {
-  padding: 15px 30px;
+  width: 82px;
+  padding: 16px;
   border: 2px solid #ececec;
   cursor: pointer;
 }
@@ -44,7 +44,6 @@
   outline-offset: 1px;
 }
 
-
 .cart-add__size:checked + .cart-add__label {
   border-color: @lg;
 }
@@ -55,8 +54,29 @@
   background-color: @lg;
   color: white;
   margin: 30px 0;
-  padding: 15px;
+  padding: 17px 15px 16px;
   cursor: pointer;
 }
 
 .hao(~".cart-add__btn");
+
+@media (min-width: 768px) {
+  .cart-add__header {
+    font-size: 30px;
+    line-height: 57px;
+    padding: 0 105px;
+    margin: 30px 0 13px 0;
+  }
+
+  .cart-add__proposition {
+    font-size: 17px;
+  }
+
+  .cart-add__label {
+    width: 112px;
+  }
+
+  .cart-add__form {
+    padding: 25px 108px 15px;
+  }
+}
