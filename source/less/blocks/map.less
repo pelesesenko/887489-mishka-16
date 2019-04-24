@@ -4,4 +4,17 @@
 
 .map__image {
   display: block;
+  width: 322px;
+  max-width: none;
+  height: 457px;
+  margin-left: -1px;
+}
+
+@media (min-width: 768px) {
+  .map__image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
 }
