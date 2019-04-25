@@ -1,5 +1,4 @@
 .order-form__wrapper {
-  min-width: 320px;
   max-width: 650px;
   margin: 0 auto;
   padding: 0 9.38%;
@@ -42,6 +41,11 @@
 
 .order-form__container--color {
   padding-top: 36px;
+}
+
+.order-form__container--contacts {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .order-form__label {
@@ -270,6 +274,10 @@
 }
 
 @media (min-width: 768px) {
+  .order-form__wide-back {
+    background-color: #f1f1f1;
+  }
+
   .order-form__wrapper {
     flex-direction: row;
     max-width: 950px;
