@@ -5,9 +5,10 @@
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.mini.css">
   <script src="./js/app.js" defer></script>
   <script src="./js/picturefill.js" async></script>
+  <script src="./js/svgxuse.js" async></script>
 </head>
 
 <body>
@@ -30,11 +31,22 @@
         </ul>
       </nav>
       <form class="page-header__search search" action="https://echo.htmlacademy.ru" data-mobile-menu="item">
-        <label class="search__label" for="search__input" aria-label="Поиск по сайту">Поиск по сайту</label>
+        <label class="search__label" for="search__input" aria-label="Поиск по сайту">
+          <svg class="icon-svg search__icon" width="30" height="30">
+            <use xlink:href="./img/sprite.svg#icon-search"></use>
+          </svg>
+          Поиск по сайту</label>
         <input class="search__input" type="text" name="search__input" id="search__input">
-        <button class="search__btn" type="submit" aria-label="Поиск"></button>
+        <button class="search__btn" type="submit" aria-label="Поиск">
+          <svg class="icon-svg search__icon search__icon--btn" width="30" height="30">
+            <use xlink:href="./img/sprite.svg#icon-search"></use>
+          </svg>
+        </button>
       </form>
-      <a class="page-header__cart cart" href="#" data-mobile-menu="item">Корзина: пока пуста</a>
+      <a class="page-header__cart cart" href="#" data-mobile-menu="item">
+        <svg class="icon-svg cart__icon" width="30" height="30">
+          <use xlink:href="./img/sprite.svg#icon-cart"></use>
+        </svg> Корзина: пока пуста</a>
       <div class="page-header__bottom page-header__bottom--pages">
         <ul class="page-header__profit">
           <li class="page-header__new"><a class="page-header__link" href="#">Новые поступления</a></li>
@@ -108,14 +120,18 @@
           <h2 class="order-form__header">ТЕЛ</h2>
           <div class="order-form__container order-form__container--contacts">
             <input class="order-form__contacts order-form__contacts--phone" name="phone" type="tel" placeholder="+7 XXX XXX XX XX*" required>
-            <div class="order-form__contacts-icon order-form__contacts-icon--phone"></div>
+            <svg class="icon-svg order-form__contacts-icon order-form__contacts-icon--phone" width="30" height="30">
+              <use xlink:href="./img/sprite.svg#icon-phone"></use>
+            </svg>
           </div>
         </div>
         <div class="order-form__wrapper order-form__wrapper--email">
           <h2 class="order-form__header order-form__header--email">E-MAIL</h2>
           <div class="order-form__container order-form__container--contacts">
             <input class="order-form__contacts order-form__contacts--email" name="email" type="email" placeholder="Ваш Email*" required>
-            <div class="order-form__contacts-icon order-form__contacts-icon--email"></div>
+            <svg class="icon-svg order-form__contacts-icon order-form__contacts-icon--email" width="30" height="30">
+              <use xlink:href="./img/sprite.svg#icon-mail"></use>
+            </svg>
           </div>
         </div>
       </div>
@@ -151,13 +167,25 @@
       <div class="page-footer__social social">
         <ul class="social__list" aria-label="Мы в соцсетях">
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" target="_blank"><span class="visually-hidden">Instagram</span></a>
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" target="_blank">
+              <svg class="icon-svg social__icon social__icon--insta" width="30" height="30">
+                <use xlink:href="./img/sprite.svg#icon-insta"></use>
+              </svg>
+              <span class="visually-hidden">Instagram</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank"><span class="visually-hidden">Facebook</span></a>
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank">
+              <svg class="icon-svg social__icon social__icon--fb" width="30" height="30">
+                <use xlink:href="./img/sprite.svg#icon-fb"></use>
+              </svg>
+              <span class="visually-hidden">Facebook</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru" target="_blank"><span class="visually-hidden">Twitter</span></a>
+            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru" target="_blank">
+              <svg class="icon-svg social__icon social__icon--twitter" width="30" height="30">
+                <use xlink:href="./img/sprite.svg#icon-twitter"></use>
+              </svg>
+              <span class="visually-hidden">Twitter</span></a>
           </li>
         </ul>
       </div>
