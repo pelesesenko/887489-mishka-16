@@ -5,14 +5,15 @@
   border-bottom: 1px solid #ececec;
   background-color: white;
   color: #000000;
+  display: flex;
 
   &::before {
     content: "";
     display: block;
     position: absolute;
     width: 20px;
-    height: 21px;
-    background-image: url("../img/icon-cart.svg");
+    height: 19px;
+    background-image: url("../img/sprite.svg#cart-view");
     background-repeat: no-repeat;
     left: 10%;
     top: 28px;
@@ -20,11 +21,25 @@
   }
 }
 
+.cart__icon {
+  display: block;
+  width: 20px;
+  height: 19px;
+  margin: 0 20px 0 auto;
+  // opacity: 0.3;
+
+  &:hover {
+    fill: @lg;
+    opacity: 1;
+  }
+}
+
 .cart:hover {
   color: rgba(0, 0, 0, 0.6);
+  fill: red;
 
   &::before {
-    background-image: url("../img/icon-cart_gr.svg");
+    background-image: url("../img/sprite.svg#cart-view-green");
     opacity: 1;
   }
 }

@@ -5,9 +5,10 @@
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.mini.css">
   <script src="./js/app.js" defer></script>
   <script src="./js/picturefill.js" async></script>
+  <script src="./js/svgxuse.js" async></script>
 </head>
 
 <body>
@@ -30,11 +31,22 @@
         </ul>
       </nav>
       <form class="page-header__search search" action="https://echo.htmlacademy.ru" data-mobile-menu="item">
-        <label class="search__label" for="search__input" aria-label="Поиск по сайту">Поиск по сайту</label>
+        <label class="search__label" for="search__input" aria-label="Поиск по сайту">
+          <svg class="icon-svg search__icon" width="30" height="30">
+            <use xlink:href="./img/sprite.svg#icon-search"></use>
+          </svg>
+          Поиск по сайту</label>
         <input class="search__input" type="text" name="search__input" id="search__input">
-        <button class="search__btn" type="submit" aria-label="Поиск"></button>
+        <button class="search__btn" type="submit" aria-label="Поиск">
+          <svg class="icon-svg search__icon search__icon--btn" width="30" height="30">
+            <use xlink:href="./img/sprite.svg#icon-search"></use>
+          </svg>
+        </button>
       </form>
-      <a class="page-header__cart cart" href="#" data-mobile-menu="item">Корзина: пока пуста</a>
+      <a class="page-header__cart cart" href="#" data-mobile-menu="item">
+        <svg class="icon-svg cart__icon" width="30" height="30">
+          <use xlink:href="./img/sprite.svg#icon-cart"></use>
+        </svg> Корзина: пока пуста</a>
       <div class="page-header__bottom page-header__bottom--pages">
         <ul class="page-header__profit">
           <li class="page-header__new"><a class="page-header__link" href="#">Новые поступления</a></li>
@@ -82,7 +94,12 @@
               <span class="good-card__description">Рост 30 см, вес 200 г</span>
               <div class="good-card__bottom">
                 <b class="good-card__price">1 200 руб.</b>
-                <button class="good-card__cart" type="button" data-modal-opener="cart"><span class="visually-hidden">Корзина</span></button>
+                <button class="good-card__cart" type="button" data-modal-opener="cart">
+                    <svg class="icon-svg good-card__icon" width="30" height="30">
+                      <use xlink:href="./img/sprite.svg#icon-cart"></use>
+                    </svg>
+                  <span class="visually-hidden">Корзина</span>
+                </button>
               </div>
             </div>
           </li>
@@ -113,7 +130,12 @@
               <span class="good-card__description">Диаметр 15 см, высота 10 см</span>
               <div class="good-card__bottom">
                 <b class="good-card__price">690 руб.</b>
-                <button class="good-card__cart" type="button" data-modal-opener="cart"><span class="visually-hidden">Корзина</span></button>
+                <button class="good-card__cart" type="button" data-modal-opener="cart">
+                  <svg class="icon-svg good-card__icon" width="30" height="30">
+                    <use xlink:href="./img/sprite.svg#icon-cart"></use>
+                  </svg>
+                  <span class="visually-hidden">Корзина</span>
+                </button>
               </div>
             </div>
           </li>
@@ -144,7 +166,11 @@
               <span class="good-card__description">Диаметр 30 см, высота 30 см</span>
               <div class="good-card__bottom">
                 <b class="good-card__price">1 500 руб.</b>
-                <button class="good-card__cart" type="button" data-modal-opener="cart"><span class="visually-hidden">Корзина</span></button>
+                <button class="good-card__cart" type="button" data-modal-opener="cart">
+                  <svg class="icon-svg good-card__icon" width="30" height="30">
+                    <use xlink:href="./img/sprite.svg#icon-cart"></use>
+                  </svg>
+                  <span class="visually-hidden">Корзина</span></button>
               </div>
             </div>
           </li>
@@ -193,10 +219,18 @@
             <img class="making__image" src="./img/video-mobile@1x.jpg" alt="Процесс производства" width="260" height="150">
           </picture>
 
-          <button class="making__play-btn"><span class="visually-hidden">Видео</span></button>
+          <button class="making__play-btn">
+              <svg class="icon-svg making__icon-btn" width="30" height="30">
+                <use xlink:href="./img/sprite.svg#icon-play"></use>
+              </svg>
+            <span class="visually-hidden">Видео</span>
+          </button>
         </div>
         <div class="making__bottom">
-          <p class="making__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <p class="making__description">
+            <svg class="icon-svg making__icon-descr" width="30" height="30">
+              <use xlink:href="./img/sprite.svg#icon-video"></use>
+            </svg> По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
           <a class="making__btn btn" href="form.html">Сделать заказ</a>
         </div>
       </div>
@@ -224,13 +258,25 @@
       <div class="page-footer__social social">
         <ul class="social__list" aria-label="Мы в соцсетях">
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" target="_blank"><span class="visually-hidden">Instagram</span></a>
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" target="_blank">
+              <svg class="icon-svg social__icon social__icon--insta" width="30" height="30">
+                <use xlink:href="./img/sprite.svg#icon-insta"></use>
+              </svg>
+              <span class="visually-hidden">Instagram</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank"><span class="visually-hidden">Facebook</span></a>
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank">
+              <svg class="icon-svg social__icon social__icon--fb" width="30" height="30">
+                <use xlink:href="./img/sprite.svg#icon-fb"></use>
+              </svg>
+              <span class="visually-hidden">Facebook</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru" target="_blank"><span class="visually-hidden">Twitter</span></a>
+            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru" target="_blank">
+              <svg class="icon-svg social__icon social__icon--twitter" width="30" height="30">
+                <use xlink:href="./img/sprite.svg#icon-twitter"></use>
+              </svg>
+              <span class="visually-hidden">Twitter</span></a>
           </li>
         </ul>
       </div>
