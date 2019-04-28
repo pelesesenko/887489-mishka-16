@@ -24,39 +24,36 @@
   z-index: 3;
   top: 0;
   left: 0;
-  padding: 25px 0 25px 24%;
+  padding: 26px 0 28px 23.5%;
   background-color: white;
   cursor: pointer;
+}
 
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background-image: url("../img/sprite.svg#search-view");
-    background-repeat: no-repeat;
-    left: 10%;
-    top: 30px;
-    opacity: 0.3;
-  }
+.search__icon {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 10%;
+  top: 30px;
+  opacity: 0.2;
 }
 
 .search__label:hover {
   color: rgba(0, 0, 0, 0.6);
 
-  &::before {
-    background-image: url("../img/sprite.svg#search-view-green");
+  & .search__icon {
     opacity: 1;
+    fill: @lg;
   }
 }
 
 .search__label:active {
   color: rgba(0, 0, 0, 0.3);
 
-  &::before {
-    background-image: url("../img/sprite.svg#search-view-green");
-    opacity: 0.4;
+  & .search__icon {
+    opacity: 0.3;
   }
 }
 
