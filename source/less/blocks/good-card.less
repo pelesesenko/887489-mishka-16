@@ -43,22 +43,33 @@
   border: none;
   padding: 0;
   margin-top: 1px;
-  background: transparent url("../img/icon-cart.svg");
-  background-repeat: no-repeat;
+  background-color: transparent;
   opacity: 0.3;
   z-index: 2;
   cursor: pointer;
   outline: none;
 }
 
+.good-card__icon {
+  width: 21px;
+  height: 19px;
+}
+
 .good-card__cart:hover,
 .good-card__cart:focus {
-  background-image: url("../img/icon-cart_gr.svg");
   opacity: 1;
+
+  & .good-card__icon {
+    fill: @lg;
+  }
 }
 
 .good-card__cart:active {
   opacity: 0.3;
+
+  & .good-card__icon {
+    fill: @lg;
+  }
 }
 
 .good-card__image-wrap {

@@ -8,11 +8,13 @@
     content: "";
     display: block;
     width: 100%;
-    height: 6px;
+    height: 7px;
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
+    background-size: 320px 23px;
+    background-position: -8px;
     opacity: 0.6;
-    margin-bottom: 28px;
+    margin-bottom: 27px;
   }
 }
 
@@ -32,15 +34,49 @@
   letter-spacing: 0.01em;
   padding-top: 83px;
   position: relative;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 58px;
-    height: 40px;
-    top: 27px;
-    left: -6px;
-    background-color: lightblue;
+.about__icon {
+  position: absolute;
+  fill: @lg;
+  width: 58px;
+  height: 37px;
+  top: 29px;
+  left: -4px;
+
+  &--money {
+    width: 55px;
+    height: 27px;
+    top: 30px;
+    left: -3px;
+  }
+
+  &--heart {
+    width: 34px;
+    height: 27px;
+    top: 35px;
+    left: 8px;
+  }
+
+  &--ball {
+    width: 37px;
+    height: 37px;
+    top: 32px;
+    left: 4px;
+  }
+
+  &--rocket {
+    width: 55px;
+    height: 27px;
+    top: 31px;
+    left: -5px;
+  }
+
+  &--gift {
+    width: 33px;
+    height: 33px;
+    top: 31px;
+    left: 4px;
   }
 }
 
@@ -80,17 +116,6 @@
     letter-spacing: 0.01em;
     padding-top: 83px;
     padding-bottom: 28px;
-
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 58px;
-      height: 40px;
-      top: 27px;
-      left: -6px;
-      background-color: lightblue;
-    }
   }
 }
 
@@ -101,14 +126,15 @@
     padding: 0 50px 62px;
 
     &::before {
-      height: 22px;
-      background-position: -26px 0;
+      height: 23px;
+      background-size: 1050px 23px;
+      background-position: -26px;
       margin: 0;
     }
   }
 
   .about__header {
-    margin: 60px 16.3% 19px;
+    margin: 59px 16.3% 19px;
   }
 
   .about__list {

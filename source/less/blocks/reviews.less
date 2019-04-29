@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 550px;
   margin: 0 auto;
-  padding: 0 9% 44px;
+  padding: 0 9.5% 44px;
 }
 
 .reviews__message {
@@ -32,7 +32,7 @@
   margin-bottom: 30px;
 }
 
-.reviews__arrow {
+.reviews__btn {
   padding: 0;
   width: 50%;
   height: 52px;
@@ -41,20 +41,16 @@
   margin-bottom: 38px;
 
   &--left {
-    background-image: url("../img/icon-left-arrow.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  &--right {
-    border-left: none;
-    background-image: url("../img/icon-right-arrow.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    border-right: none;
   }
 }
 
-.reviews__btn {
+.reviews__icon-btn {
+  width: 52px;
+  height: 26px;
+}
+
+.reviews__button {
   width: 100%;
 }
 
@@ -112,18 +108,14 @@
     margin-right: auto;
   }
 
-  .reviews__arrow {
-    width: 88px;
+  .reviews__btn {
+    width: 87px;
     border: none;
     margin-bottom: 0;
     margin-top: 3px;
-
-    &--left {
-      width: 87px;
-    }
   }
 
-  .reviews__btn {
+  .reviews__button {
     width: 175px;
     position: absolute;
     right: 6.51%;
@@ -151,14 +143,11 @@
     font-size: 17px;
   }
 
-  .reviews__arrow {
+  .reviews__btn {
     margin-top: 2px;
   }
 
-  .reviews__btn {
-    width: 175px;
-    position: absolute;
+  .reviews__button {
     right: 8.7%;
-    top: 79px;
   }
 }
