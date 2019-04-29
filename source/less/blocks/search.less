@@ -24,39 +24,35 @@
   z-index: 3;
   top: 0;
   left: 0;
-  padding: 25px 0 25px 24%;
+  padding: 26px 0 28px 23.5%;
   background-color: white;
   cursor: pointer;
+}
 
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background-image: url("../img/sprite.svg#search-view");
-    background-repeat: no-repeat;
-    left: 10%;
-    top: 30px;
-    opacity: 0.3;
-  }
+.search__icon {
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 10%;
+  top: 30px;
+  opacity: 0.2;
 }
 
 .search__label:hover {
   color: rgba(0, 0, 0, 0.6);
 
-  &::before {
-    background-image: url("../img/sprite.svg#search-view-green");
+  & .search__icon {
     opacity: 1;
+    fill: @lg;
   }
 }
 
 .search__label:active {
   color: rgba(0, 0, 0, 0.3);
 
-  &::before {
-    background-image: url("../img/sprite.svg#search-view-green");
-    opacity: 0.4;
+  & .search__icon {
+    opacity: 0.3;
   }
 }
 
@@ -94,15 +90,15 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+  }
 
-    &::before {
-      position: static;
-      margin: 3px auto 0;
-    }
+  .search__icon {
+    position: static;
+    margin: 2px auto 0;
+  }
 
-    .search__input:focus {
-      z-index: 4;
-    }
+  .search__input:focus {
+    z-index: 4;
   }
 }
 
@@ -121,22 +117,32 @@
     left: 0;
     top: 0;
     background-color: white;
-    background-image: url("../img/sprite.svg#search-view-green");
-    background-repeat: no-repeat;
-    background-position: 49% 53%;
-    background-size: 22px 20px;
     outline: none;
     cursor: pointer;
+  }
 
-    &:hover {
-      z-index: 5;
-      background-size: 24px 22px;
+  .search__icon--btn {
+    fill: @lg;
+    width: 21px;
+    height: 21px;
+    opacity: 1;
+  }
+
+  .search__btn:hover {
+    z-index: 5;
+
+    & .search__icon--btn {
+      width: 24px;
+      height: 24px;
     }
+  }
 
-    &:active {
-      z-index: 5;
-      background-size: 22px 20px;
-      outline: none;
+  .search__btn:active {
+    z-index: 5;
+
+    & .search__icon--btn {
+      width: 21px;
+      height: 21px;
     }
   }
 
