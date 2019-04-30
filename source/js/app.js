@@ -3,22 +3,34 @@ let menuToggleBtn = document.querySelector('[data-mobile-menu="toggle"]');
 let menuItems = document.querySelectorAll('[data-mobile-menu="item"]');
 let isMenuOpen = true;
 let isMobile = false;
+let modifier = "";
 
 
 function openMenu() {
-  menuToggleBtn.classList.add('page-header__btn-menu--close');
+  if (isMobile) {
+    menuToggleBtn.classList.add('page-header__btn-menu--close');
+  }
   for (let i = 0; i < menuItems.length; i++) {
     menuItems[i].style.display = '';
-    isMenuOpen = true;
+    modifier = menuItems[i].classList[0] + '--mobile';
+
+    if (isMobile) {
+      menuItems[i].classList.add(modifier);
+    } else {
+      menuItems[i].classList.remove(modifier);
+    }
   }
+  isMenuOpen = true;
 }
 
 function closeMenu() {
   menuToggleBtn.classList.remove('page-header__btn-menu--close');
   for (let i = 0; i < menuItems.length; i++) {
     menuItems[i].style.display = 'none';
-    isMenuOpen = false;
+    modifier = menuItems[i].classList[0] + '--mobile'; //
+    menuItems[i].classList.remove(modifier);
   }
+  isMenuOpen = false;
 }
 
 function toggleMenu() {

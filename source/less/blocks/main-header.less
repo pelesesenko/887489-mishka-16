@@ -53,27 +53,27 @@
 
 .main-header__button:first-child {
   background-color: #63d1bb;
+}
 
-  & .main-header__icon {
-    width: 63px;
-    height: 62px;
-    opacity: 0.17;
-  }
+.main-header__button:first-child .main-header__icon {
+  width: 63px;
+  height: 62px;
+  opacity: 0.17;
 }
 
 .main-header__button:last-child {
   background-color: #46c1ae;
   padding: 20px 27px 20px 28px;
+}
 
-  & .main-header__button-header {
-    padding-top: 5px;
-  }
+.main-header__button:last-child .main-header__button-header {
+  padding-top: 5px;
+}
 
-  & .main-header__icon {
-    width: 60px;
-    height: 60px;
-    opacity: 0.17;
-  }
+.main-header__button:last-child .main-header__icon {
+  width: 60px;
+  height: 60px;
+  opacity: 0.17;
 }
 
 @media (min-width: 768px) {
@@ -123,10 +123,10 @@
     font-size: 20px;
     line-height: 30px;
     padding: 28px 25px 29px 35px;
+  }
 
-    & .main-header__icon {
-      margin-top: 2px;
-    }
+  .main-header__button .main-header__icon {
+    margin-top: 2px;
   }
 
   .main-header__button-header {
@@ -135,16 +135,17 @@
 
   .main-header__button:last-child {
     padding: 28px 25px 29px 35px;
+  }
 
-    & .main-header__icon {
-      margin: 3px 9px 0 0;
-    }
+  .main-header__button:last-child .main-header__icon {
+    margin: 3px 9px 0 0;
+  }
 
-    & .main-header__button-header {
-      padding: 0;
-    }
+  .main-header__button:last-child .main-header__button-header {
+    padding: 0;
   }
 }
+
 
 @media (min-width: 1150px) {
   .main-header {

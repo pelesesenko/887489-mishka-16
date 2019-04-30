@@ -56,8 +56,8 @@
   border: none;
   height: 23px;
   width: 23px;
-  top: 28px;
-  right: 9.5%;
+  top: 27px;
+  right: 9%;
 
   &::after {
     left: -9px;
@@ -80,6 +80,35 @@
 
 .hao(~".page-header__btn-menu");
 
+.page-header__search {
+  position: relative;
+}
+
+.page-header__cart {
+  position: relative;
+}
+
+.page-header__nav--mobile {
+  position: absolute;
+  left: 0;
+  bottom: -158px;
+  background-color: white;
+  z-index: 2;
+}
+
+.page-header__search--mobile {
+  position: absolute;
+  left: 0;
+  bottom: -237px;
+  z-index: 2;
+}
+
+.page-header__cart--mobile {
+  position: absolute;
+  left: 0;
+  bottom: -316px;
+  z-index: 2;
+}
 
 .page-header__bottom {
   display: none;
@@ -211,6 +240,7 @@
     flex-wrap: wrap;
     font-size: 15px;
     list-style: none;
+    margin: 0;
     padding: 0;
     padding-left: 50px;
     padding-top: 17px;

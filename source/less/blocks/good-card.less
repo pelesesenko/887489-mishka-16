@@ -58,18 +58,19 @@
 .good-card__cart:hover,
 .good-card__cart:focus {
   opacity: 1;
+}
 
-  & .good-card__icon {
-    fill: @lg;
-  }
+.good-card__cart:hover .good-card__icon,
+.good-card__cart:focus .good-card__icon {
+  fill: @lg;
 }
 
 .good-card__cart:active {
   opacity: 0.3;
+}
 
-  & .good-card__icon {
-    fill: @lg;
-  }
+.good-card__cart:active .good-card__icon {
+  fill: @lg;
 }
 
 .good-card__image-wrap {

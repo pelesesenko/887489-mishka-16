@@ -1,6 +1,5 @@
 .cart {
   width: 100%;
-  position: relative;
   padding: 26px 0 28px 23.5%;
   border-bottom: 1px solid #ececec;
   background-color: white;
@@ -19,19 +18,19 @@
 
 .cart:hover {
   color: rgba(0, 0, 0, 0.6);
+}
 
-  & .cart__icon {
-    fill: @lg;
-    opacity: 1;
-  }
+.cart:hover .cart__icon {
+  fill: @lg;
+  opacity: 1;
 }
 
 .cart:active {
   color: rgba(0, 0, 0, 0.3);
+}
 
-  & .cart__icon {
-    opacity: 0.3;
-  }
+.cart:active .cart__icon {
+  opacity: 0.3;
 }
 
 @media (min-width: 768px) {
