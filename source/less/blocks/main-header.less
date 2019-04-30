@@ -41,8 +41,8 @@
   line-height: 24px;
   min-height: 103px;
   padding: 23px 25px 18px 28px;
-  color: rgba(255, 255, 255, 1);
   display: flex;
+  color: rgba(255, 255, 255, 1);
 }
 
 .main-header__button-header {
@@ -74,6 +74,18 @@
   width: 60px;
   height: 60px;
   opacity: 0.17;
+}
+
+.main-header__button:hover .main-header__icon {
+  opacity: 0.3;
+}
+
+.main-header__button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.main-header__button:active .main-header__icon {
+  opacity: 0.1;
 }
 
 @media (min-width: 768px) {

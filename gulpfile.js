@@ -28,12 +28,14 @@ gulp.task("css", function() {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(csso())
+    .pipe(csso({ restructure: false }))
     .pipe(rename("style.mini.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
+
+// .pipe(csso({restructure: false}))
 
 gulp.task("images", function() {
   return gulp.src("source/img/**/*.{png,jpg,svg}")

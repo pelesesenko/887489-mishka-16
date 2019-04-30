@@ -71,6 +71,7 @@
   height: 62px;
   margin-top: -31px;
   margin-left: -41px;
+  opacity: 0.6;
 }
 
 
@@ -98,6 +99,26 @@
     width: 668px;
     display: flex;
     flex-direction: column;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .making__wrapper:hover {
+    &::after {
+      box-shadow: 2px 5px 15px -8px gray;
+    }
+  }
+
+  .making__wrapper:active {
+    &::after {
+      box-shadow: 2px 5px 15px -10px gray;
+    }
   }
 
   .making__container {
@@ -105,6 +126,7 @@
     height: 455px;
     order: -1;
     flex-shrink: 0;
+    z-index: 1;
   }
 
   .making__image {
@@ -116,6 +138,7 @@
     font-size: 20px;
     margin: 0 auto;
     padding: 39px 41px 29px;
+    z-index: 1;
   }
 
   .making__icon-header {
@@ -125,6 +148,7 @@
 
   .making__bottom {
     padding-bottom: 1px;
+    z-index: 1;
   }
 
   .making__description {
